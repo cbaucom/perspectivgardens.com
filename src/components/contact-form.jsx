@@ -1,6 +1,6 @@
 import React from "react"
 import { navigate } from "gatsby"
-import Button from "./Button"
+import Button from "./button"
 
 const encode = data => {
   return Object.keys(data)
