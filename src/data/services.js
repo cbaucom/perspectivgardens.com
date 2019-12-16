@@ -1,7 +1,9 @@
 import React from "react"
-import bedMaintenance from "../images/lawn-bed-maintenance.jpg"
+import mowing from "../images/A1.jpg"
+import landscaping from "../images/B1.jpg"
+import flagstone from "../images/C1.jpg"
+import bedMaintenance from "../images/D1.jpg"
 import fertilizer from "../images/fert.jpg"
-import flagstone from "../images/landscape-hardscape.jpg"
 import leaves from "../images/leaves.jpg"
 import treetrimming from "../images/treetrimming.jpeg"
 
@@ -9,36 +11,26 @@ const services = [
   {
     name: "Mowing and Edging",
     description:
-      "Yard mowing and garden edging can overhaul a property’s curb appeal. The knowledgeable technicians at Perspectiv Gardens use professional-grade equipment to give customers a perfectly manicured lawn.",
-    image: (
-      <img
-        src="https://images.unsplash.com/photo-1558904541-efa843a96f01?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
-        alt="Mowing"
-      />
-    ),
+      "Only using the best, professional-grade equipment, our technicians take the time to make sure we leave your yard looking spectacular every week.",
+    image: <img src={mowing} alt="Mowing" />,
   },
 
   {
     name: "Landscaping",
     description:
-      "No matter how big or how small the space, your landscape offers opportunities to raise your property’s market value",
-    image: (
-      <img
-        src="https://images.unsplash.com/photo-1553524808-eef8eb03cf29?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
-        alt="Landscaping"
-      />
-    ),
+      "Perspectiv Gardens offers a wide range of landscaping services. We take great pride in making our clients happy with the quality of our work and the products we use to create your dream landscape.",
+    image: <img src={landscaping} alt="Landscaping" />,
   },
   {
     name: "Flagstone",
     description:
-      "No matter how big or how small the space, your landscape offers opportunities to raise your property’s market value",
+      "A flagstone pathway or patio is what sets off any landscape. Our years of flagstone design and installation is what separates us from the others.",
     image: <img src={flagstone} alt="Flagstone" />,
   },
   {
     name: "Bed Maintenance",
     description:
-      "No matter how big or how small the space, your landscape offers opportunities to raise your property’s market value",
+      "We'll do the tedious work for you. Whether it's weeding, laying down some fresh mulch, or bringing more color to your flower beds, Perspectiv has you covered.",
     image: <img src={bedMaintenance} alt="Bed Maintenance" />,
   },
   {
@@ -50,13 +42,13 @@ const services = [
   {
     name: "Rake and Bag Leaves",
     description:
-      "From leaf removal to lawn aeration and fertilization, Yepez Maintenance Service is commitment to excellent lawn care in the Dallas area.",
+      "From leaf removal to lawn aeration and fertilization, Perspectiv Gardens is committed to excellent lawn care in the Dallas area.",
     image: <img src={leaves} alt="Rake and Bag Leaves" />,
   },
   {
     name: "Fertilization",
     description:
-      "From leaf removal to lawn aeration and fertilization, Yepez Maintenance Service is commitment to excellent lawn care in the Dallas area.",
+      "From leaf removal to lawn aeration and fertilization, Perspectiv Gardens is committed to excellent lawn care in the Dallas area.",
     image: <img src={fertilizer} alt="Fertilization" />,
   },
   {

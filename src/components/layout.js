@@ -9,8 +9,6 @@ import theme from "../styles/theme"
 import Navigation from "./navigation"
 import Footer from "./footer"
 
-import "../styles/burger-menu.css"
-
 const GlobalStyle = createGlobalStyle`
   ${reset}
   ${headroom}
@@ -49,7 +47,6 @@ const Layout = ({ children }) => {
       </Helmet>
       <LayoutContainer id="App">
         <GlobalStyle />
-        {/* <SideBar pageWrapId={"page-wrap"} outerContainerId={"App"} /> */}
         <Navigation />
 
         <MainContainer id="page-wrap">{children}</MainContainer>
