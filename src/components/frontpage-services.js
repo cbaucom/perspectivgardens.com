@@ -13,7 +13,7 @@ const StyledLink = styled(Link)`
 `
 
 const Wrapper = styled.section`
-  padding: 2rem 0;
+  padding: 2rem 0 4rem;
 `
 
 const Title = styled.h2`
@@ -32,7 +32,8 @@ const ServicesContainer = styled.div`
   grid-template-columns: 1fr;
   grid-gap: 1rem;
   align-items: stretch;
-  padding-bottom: 3rem;
+  padding-bottom: 1rem;
+  margin: 0 10px;
 
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));

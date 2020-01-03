@@ -7,6 +7,8 @@ const StyledCard = styled.article`
   background: #fff;
   margin: 2rem auto;
   padding-bottom: 1rem;
+  border-radius: 5px;
+  border-top: 5px solid ${props => props.theme.colors.primary.default};
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
   transition: 0.25s;
   &:hover {

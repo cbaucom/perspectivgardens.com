@@ -2,12 +2,11 @@ import React from "react"
 import styled from "styled-components"
 import { FaQuoteLeft } from "react-icons/fa"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import Card from "../components/card"
-import Container from "../components/container"
-
 import reviews from "../data/reviews"
+
+const Wrapper = styled.section`
+  padding: 2rem 0;
+`
 
 const Title = styled.h1`
   text-transform: uppercase;
@@ -94,7 +93,7 @@ const StyledCard = styled.article`
 `
 
 const Reviews = () => (
-  <Container>
+  <Wrapper>
     <Title>Testimonials</Title>
     <ReviewsContainer>
       {reviews.map(({ name, description }) => (
@@ -111,7 +110,7 @@ const Reviews = () => (
         </StyledCard>
       ))}
     </ReviewsContainer>
-  </Container>
+  </Wrapper>
 )
 
 export default Reviews
