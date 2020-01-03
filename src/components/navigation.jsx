@@ -1,9 +1,11 @@
-import React from "react"
+import React, { useState, useRef } from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 import Headroom from "react-headroom"
 import { FiPhoneCall } from "react-icons/fi"
+import FocusLock from "react-focus-lock"
 
+import { useOnClickOutside } from "../hooks"
 import Logo from "./logo"
 import Burger from "./burger"
 import Menu from "./menu"
@@ -16,6 +18,10 @@ const Wrapper = styled.div`
   justify-content: space-between;
   flex-direction: row;
   width: 100%;
+
+  @media (max-width: ${props => props.theme.breakpoints.phone}) {
+    justify-content: center;
+  }
 `
 
 const StyledLink = styled(Link)`
@@ -35,6 +41,10 @@ const StyledLink = styled(Link)`
 `
 
 const PhoneLink = styled.div`
+  position: absolute;
+  top: 25px;
+  left: 1.5rem;
+
   a {
     display: flex;
     flex-direction: column;
@@ -87,26 +97,38 @@ const Nav = styled.nav`
   }
 `
 
-const Navigation = () => (
-  <Headroom>
-    <Wrapper>
+const Navigation = () => {
+  const [open, setOpen] = useState(false)
+  const node = useRef()
+  const menuId = "main-menu"
+
+  useOnClickOutside(node, () => setOpen(false))
+
+  return (
+    <Headroom>
       <PhoneLink>
         <a href="tel:1-214-560-0265">
           <FiPhoneCall />
         </a>
       </PhoneLink>
-      <StyledLink to="/" aria-label="Perspectiv Gardens, Back to homepage">
-        <Logo />
-      </StyledLink>
-      <Nav>
-        <StyledLink to="/about">About</StyledLink>
-        <StyledLink to="/services">Services</StyledLink>
-        <StyledLink to="/contact">Contact</StyledLink>
-      </Nav>
-      <Burger />
-      <Menu />
-    </Wrapper>
-  </Headroom>
-)
+      <Wrapper>
+        <StyledLink to="/" aria-label="Perspectiv Gardens, Back to homepage">
+          <Logo />
+        </StyledLink>
+        <Nav>
+          <StyledLink to="/about">About</StyledLink>
+          <StyledLink to="/services">Services</StyledLink>
+          <StyledLink to="/contact">Contact</StyledLink>
+        </Nav>
+      </Wrapper>
+      <div ref={node}>
+        <FocusLock disabled={!open}>
+          <Burger open={open} setOpen={setOpen} aria-controls={menuId} />
+          <Menu open={open} setOpen={setOpen} id={menuId} />
+        </FocusLock>
+      </div>
+    </Headroom>
+  )
+}
 
 export default Navigation

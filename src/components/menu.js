@@ -1,4 +1,5 @@
 import React from "react"
+import { bool } from "prop-types"
 import styled from "styled-components"
 import { Link } from "gatsby"
 
@@ -6,7 +7,7 @@ const StyledMenu = styled.nav`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: ${props => props.theme.colors.primary.default};
+  background: ${({ theme }) => theme.colors.bg};
   height: 100vh;
   text-align: center;
   padding: 2rem;
@@ -14,13 +15,13 @@ const StyledMenu = styled.nav`
   top: 0;
   left: 0;
   transition: transform 0.3s ease-in-out;
-  transform: translateX(-100%);
+  transform: ${({ open }) => (open ? "translateX(0)" : "translateX(-100%)")};
 
-  @media (max-width: ${props => props.theme.breakpoints.phone}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.phone}) {
     width: 100%;
   }
 
-  @media (min-width: ${props => props.theme.breakpoints.phone}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.phone}) {
     display: none;
   }
 `
@@ -31,28 +32,41 @@ const StyledLink = styled(Link)`
   padding: 2rem 0;
   font-weight: bold;
   letter-spacing: 0.5rem;
-  color: ${props => props.theme.colors.white.default};
+  color: ${({ theme }) => theme.colors.white.default};
   text-decoration: none;
   transition: color 0.3s linear;
 
-  @media (max-width: ${props => props.theme.breakpoints.phone}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.phone}) {
     font-size: 1.5rem;
     text-align: center;
   }
 
   &:hover {
-    color: ${props => props.theme.colors.white.light};
+    color: ${({ theme }) => theme.colors.white.light};
   }
 `
 
-const Menu = () => {
+const Menu = ({ open, ...props }) => {
+  const isHidden = open ? true : false
+  const tabIndex = isHidden ? 0 : -1
+
   return (
-    <StyledMenu>
-      <StyledLink to="/about">About</StyledLink>
-      <StyledLink to="/services">Services</StyledLink>
-      <StyledLink to="/contact">Contact</StyledLink>
+    <StyledMenu open={open} aria-hidden={!isHidden} {...props}>
+      <StyledLink to="/about" tabIndex={tabIndex}>
+        About
+      </StyledLink>
+      <StyledLink to="/services" tabIndex={tabIndex}>
+        Services
+      </StyledLink>
+      <StyledLink to="/contact" tabIndex={tabIndex}>
+        Contact
+      </StyledLink>
     </StyledMenu>
   )
+}
+
+Menu.propTypes = {
+  open: bool.isRequired,
 }
 
 export default Menu
