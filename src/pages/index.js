@@ -4,10 +4,10 @@ import styled from "styled-components"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Image from "../components/image"
-import Testimonials from "../components/testimonials"
 import FrontpageServices from "../components/frontpage-services"
 import Gallery from "../components/gallery"
 import FrontpageHero from "../components/frontpage-hero"
+import Reviews from "../components/reviews"
 
 const Container = styled.div`
   margin-top: 10px;
@@ -30,7 +30,7 @@ const IndexPage = () => (
       <FrontpageHero />
       <Content>
         <FrontpageServices />
-        <Testimonials />
+        <Reviews />
         <Gallery />
       </Content>
     </Container>

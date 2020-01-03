@@ -13,7 +13,7 @@ const StyledLink = styled(Link)`
 `
 
 const Wrapper = styled.section`
-  padding: 2rem 0 6rem;
+  padding: 2rem 0;
 `
 
 const Title = styled.h2`
