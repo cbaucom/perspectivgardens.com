@@ -92,7 +92,6 @@ const Nav = styled.nav`
   }
 
   @media (max-width: ${props => props.theme.breakpoints.phone}) {
-    /* font-size: ${props => props.theme.fontSize.small}; */
     display: none;
   }
 `
