@@ -4,8 +4,8 @@ import landscaping from "../images/B1.jpg"
 import flagstone from "../images/C1.jpg"
 import bedMaintenance from "../images/D1.jpg"
 import fertilizer from "../images/fert.jpg"
-import leaves from "../images/leaves.jpg"
-import treetrimming from "../images/treetrimming.jpeg"
+import leaves from "../images/raking-leaves.jpg"
+import treetrimming from "../images/D2.jpg"
 
 const services = [
   {
@@ -39,7 +39,7 @@ const services = [
   },
   {
     id: 5,
-    name: "Shurb and Tree Trimming",
+    name: "Shrub and Tree Trimming",
     description:
       "During the peak growing season and the off-peak winter months, caring for the trees, shrubs, and bushes in your yard is key to having a well-manicured, flourishing lawn.",
     image: <img src={treetrimming} alt="Shurb and Tree Trimming" />,
