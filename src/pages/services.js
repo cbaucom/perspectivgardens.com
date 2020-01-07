@@ -36,7 +36,7 @@ const Services = () => (
       <Title>Services</Title>
       <ServicesContainer>
         {services.map(service => (
-          <Card {...service} />
+          <Card key={service.id} {...service} />
         ))}
       </ServicesContainer>
     </Container>

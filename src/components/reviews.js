@@ -96,8 +96,8 @@ const Reviews = () => (
   <Wrapper>
     <Title>Testimonials</Title>
     <ReviewsContainer>
-      {reviews.map(({ name, description }) => (
-        <StyledCard className="review">
+      {reviews.map(({ id, name, description }) => (
+        <StyledCard className="review" key={id}>
           <IconContainer>
             <FaQuoteLeft size={32} />
           </IconContainer>

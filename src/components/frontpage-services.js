@@ -45,7 +45,7 @@ const FrontpageServices = () => (
     <Title>Services</Title>
     <ServicesContainer>
       {services.slice(0, 4).map(service => (
-        <Card {...service} />
+        <Card key={service.id} {...service} />
       ))}
     </ServicesContainer>
     <StyledLink to="services">See all services</StyledLink>
