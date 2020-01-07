@@ -41,14 +41,10 @@ const Item = styled.div`
   margin: 1rem 0.5rem;
   flex: auto;
   /* flex: 1 1 100%; */
-  width: 25%;
+  width: 100%;
 
   @media (min-width: ${props => props.theme.breakpoints.phone}) {
     flex: 1 1 40%;
-  }
-
-  &:hover {
-    box-shadow: 0 3px 5px 1px rgba(42, 42, 42, 0.4);
   }
 `
 
