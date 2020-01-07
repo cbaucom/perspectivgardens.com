@@ -17,12 +17,15 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    `gatsby-transformer-sharp`,
+    `gatsby-plugin-styled-components`,
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
-      resolve: `gatsby-plugin-styled-components`,
+      resolve: `gatsby-source-drive`,
       options: {
-        // Add any options here
+        folderId: process.env.GOOGLE_DRIVE_FOLDER_ID,
+        key: process.env.GOOGLE_KEY,
+        serviceAccountEmail: process.env.GOOGLE_SA_EMAIL,
       },
     },
     {
