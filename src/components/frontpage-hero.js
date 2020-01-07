@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 
 import { buttonStyles } from "../components/button"
 
-import bgImg from "../images/home-bg-dark.jpg"
+import bgImg from "../images/homepage-hero.jpg"
 
 const StyledLink = styled(Link)`
   ${buttonStyles}
