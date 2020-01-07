@@ -157,7 +157,7 @@ const Footer = () => (
             <OutboundLink
               className="facebook"
               title="facebook"
-              href="https://www.facebook.com/darkhorsefish/"
+              href="https://www.facebook.com/Perspectivgardens"
               target="blank"
             >
               <FaFacebook />
