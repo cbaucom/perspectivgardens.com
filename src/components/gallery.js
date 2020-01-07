@@ -1,10 +1,10 @@
 import React from "react"
 import styled from "styled-components"
-import { Link } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
 
 const Wrapper = styled.section`
   padding: 2rem 0 6rem;
-  height: 900px;
 `
 
 const Title = styled.h2`
@@ -17,24 +17,79 @@ const Title = styled.h2`
   padding-bottom: 2rem;
 `
 
-const ServicesContainer = styled.div`
-  display: grid;
-  justify-items: center;
-  grid-template-columns: 1fr;
-  grid-gap: 1rem;
-  align-items: stretch;
+const GalleryContainer = styled.div`
+  margin: 0 auto;
+  width: 100%;
   padding-bottom: 3rem;
 
-  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  .gatsby-image-wrapper {
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+`
+const Grid = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+`
+
+const Item = styled.div`
+  margin: 1rem 0.5rem;
+  flex: auto;
+  /* flex: 1 1 100%; */
+  width: 25%;
+
+  @media (min-width: ${props => props.theme.breakpoints.phone}) {
+    flex: 1 1 40%;
+  }
+
+  &:hover {
+    box-shadow: 0 3px 5px 1px rgba(42, 42, 42, 0.4);
   }
 `
 
-const Gallery = () => (
-  <Wrapper>
-    <Title>Gallery</Title>
-    <ServicesContainer></ServicesContainer>
-  </Wrapper>
-)
+const Gallery = () => {
+  const data = useStaticQuery(graphql`
+    {
+      allDriveNode {
+        edges {
+          node {
+            id
+            name
+            localFile {
+              childImageSharp {
+                fluid(maxWidth: 1000, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  return (
+    <Wrapper>
+      <Title>Gallery</Title>
+      <GalleryContainer>
+        <Grid>
+          {data.allDriveNode.edges.map(({ node }) => (
+            <Item key={node.id}>
+              <Img
+                fluid={node.localFile.childImageSharp.fluid}
+                alt={node.name}
+              />
+            </Item>
+          ))}
+        </Grid>
+      </GalleryContainer>
+    </Wrapper>
+  )
+}
 
 export default Gallery
