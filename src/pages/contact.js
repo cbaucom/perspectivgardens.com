@@ -91,21 +91,24 @@ const Card = styled.article`
     margin-top: 0;
     margin-bottom: 0.1rem;
   }
-  /* @media (min-width: ${props => props.theme.breakpoints.phone}) {
-    min-height: 603px;
-  }
-  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-    min-height: 530px;
-  } */
 `
 const InfoWrapper = styled.div`
-  display: grid;
-  grid-gap: 20px;
-  grid-template-columns: 1fr 1fr;
-  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
 
-  @media (max-width: ${props => props.theme.breakpoints.tablet}) {
-    grid-template-columns: 1fr;
+  @supports (display: grid) {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    padding: 1rem;
+    width: 100%;
+
+    @media (max-width: ${props => props.theme.breakpoints.tablet}) {
+      grid-template-columns: 1fr;
+    }
   }
 
   h3,
@@ -135,6 +138,12 @@ const SectionWrapper = styled.div`
   padding: 0.5rem;
   text-align: left;
   width: 100%;
+  flex: 1 1 100%;
+
+  @media (min-width: ${props => props.theme.breakpoints.phone}) {
+    flex: 1 1 40%;
+    margin: 2rem 0.5rem;
+  }
   h4 {
     margin-bottom: 0.5rem;
     a {
