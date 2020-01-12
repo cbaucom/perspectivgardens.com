@@ -36,6 +36,7 @@ const Text = styled.p`
   line-height: 2.25rem;
   text-align: center;
   padding: 1rem;
+  width: 100%;
 `
 
 const About = () => {
