@@ -4,6 +4,7 @@ import landscaping from "../images/B1.jpg"
 import flagstone from "../images/C1.jpg"
 import bedMaintenance from "../images/D1.jpg"
 import fertilizer from "../images/fert.jpg"
+import weedcontrol from "../images/weedcontrol.jpg"
 import leaves from "../images/raking-leaves.jpg"
 import treetrimming from "../images/D2.jpg"
 
@@ -55,15 +56,15 @@ const services = [
     id: 7,
     name: "Fertilization",
     description:
-      "From leaf removal to lawn aeration and fertilization, Perspectiv Gardens is committed to excellent lawn care in the Dallas area.",
+      "We provide a six-application (round) lawn care program (LCP).  Includes pre- and post-emergent; fertilization; and weed control. The fertilizers we use are loaded with nutrients for your lawn.",
     image: <img src={fertilizer} alt="Fertilization" />,
   },
   {
     id: 8,
     name: "Weed and Insect Control",
     description:
-      "Weeds and pests are nuisances that can destroy the beauty of your landscape, and if not addressed in a timely manner, they can cause costly damage to your property as well.",
-    image: <img src={fertilizer} alt="Weed and Insect Control" />,
+      "Lucky for you, our weed and insect control services are already included in our six-application lawn care program (LCP).",
+    image: <img src={weedcontrol} alt="Weed and Insect Control" />,
   },
 ]
 
