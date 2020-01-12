@@ -9,7 +9,7 @@ import services from "../data/services"
 
 const StyledLink = styled(Link)`
   ${buttonStyles}
-  width: fit-content;
+  width: 200px;
 `
 
 const Wrapper = styled.section`

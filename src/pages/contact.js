@@ -29,6 +29,10 @@ const FormWrapper = styled.div`
     padding: 2rem 1rem;
   }
 
+  h3 {
+    width: 100%;
+  }
+
   form {
     text-align: left;
   }
@@ -157,6 +161,12 @@ const SectionWrapper = styled.div`
     flex-direction: column;
     justify-content: start;
     align-items: flex-start;
+    width: 100%;
+
+    p {
+      width: 100%;
+    }
+
     a {
       &:hover {
         color: ${props => props.theme.colors.primary.light};
