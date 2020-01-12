@@ -11,12 +11,17 @@ const StyledCard = styled.article`
   border-top: 5px solid ${props => props.theme.colors.primary.default};
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
   transition: 0.25s;
+  width: 100%;
+  flex: 1 1 100%;
+
   &:hover {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
   }
-  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-    /* display: flex; */
-    height: auto;
+
+  @media (min-width: ${props => props.theme.breakpoints.phone}) {
+    flex: 1 1 40%;
+    height: 700px;
+    margin: 2rem 0.5rem;
   }
 `
 

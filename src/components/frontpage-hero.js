@@ -8,7 +8,7 @@ import bgImg from "../images/homepage-hero.jpg"
 
 const StyledLink = styled(Link)`
   ${buttonStyles}
-  width: fit-content;
+  width: 270px;
   font-size: 1.35rem;
 `
 
@@ -50,7 +50,7 @@ const SubTitle = styled.h2`
   font-weight: 400;
   color: ${props => props.theme.colors.white.default};
   text-align: center;
-  padding-bottom: 2rem;
+  padding-bottom: 4rem;
 
   @media (min-width: ${props => props.theme.breakpoints.phone}) {
     font-size: 2rem;
@@ -61,24 +61,10 @@ const SubTitle = styled.h2`
   }
 `
 
-const ServicesContainer = styled.div`
-  display: grid;
-  justify-items: center;
-  grid-template-columns: 1fr;
-  grid-gap: 1rem;
-  align-items: stretch;
-  padding-bottom: 3rem;
-
-  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  }
-`
-
 const FrontpageHero = () => (
   <Wrapper>
     <Title>Perspectiv Gardens</Title>
     <SubTitle>Lawncare and Landscaping</SubTitle>
-    <ServicesContainer></ServicesContainer>
     <StyledLink to="contact">Request a Free Quote</StyledLink>
   </Wrapper>
 )

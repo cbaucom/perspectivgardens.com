@@ -27,16 +27,23 @@ const Title = styled.h2`
 `
 
 const ServicesContainer = styled.div`
-  display: grid;
-  justify-items: center;
-  grid-template-columns: 1fr;
-  grid-gap: 1rem;
-  align-items: stretch;
-  padding-bottom: 1rem;
-  margin: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 
-  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  @supports (display: grid) {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+    align-items: stretch;
+    padding-bottom: 1rem;
+    margin: 0 10px;
+
+    @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    }
   }
 `
 

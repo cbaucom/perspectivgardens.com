@@ -28,12 +28,20 @@ const ImageContainer = styled.div`
   justify-content: center;
   align-items: center;
 
+  img {
+    height: 175px;
+  }
+
   @media (min-width: ${props => props.theme.breakpoints.phone}) {
     width: 40vw;
   }
 
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     width: 25vw;
+
+    img {
+      height: 200px;
+    }
   }
 `
 

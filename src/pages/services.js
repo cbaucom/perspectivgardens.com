@@ -23,6 +23,7 @@ const ServicesContainer = styled.div`
   grid-template-columns: 1fr;
   grid-gap: 1rem;
   align-items: stretch;
+  width: 100%;
 
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
