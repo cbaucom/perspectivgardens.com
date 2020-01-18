@@ -15,12 +15,11 @@ function Contact() {
         <Title>Contact</Title>
 
         <FormWrapper>
-          <h3>
+          <Text>
             Please fill out the form below and we will get back to you as soon
             as possible.
-          </h3>
+          </Text>
           <Card>
-            <h3>Request to book</h3>
             <ContactForm />
           </Card>
         </FormWrapper>
@@ -89,10 +88,6 @@ const FormWrapper = styled.div`
     padding: 2rem 1rem;
   }
 
-  h3 {
-    width: 100%;
-  }
-
   form {
     text-align: left;
   }
@@ -135,16 +130,28 @@ const FormWrapper = styled.div`
   }
 `
 
+const Text = styled.h3`
+  width: 90%;
+`
+
 const Card = styled.article`
   padding: 3rem 1rem;
   margin: 1rem auto;
   width: 100%;
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 6px rgba(13, 97, 49, 0.25);
   transition: 0.25s;
   display: flex;
   flex-direction: column;
   &:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.45);
+    box-shadow: 0 0 10px rgba(13, 97, 49, 0.5);
+  }
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.phone}) {
+    width: 90%;
+  }
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    width: 80%;
   }
 
   h2 {

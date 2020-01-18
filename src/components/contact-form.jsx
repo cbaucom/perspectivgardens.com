@@ -80,6 +80,7 @@ class ContactForm extends React.Component {
               type="text"
               name="name"
               autoComplete="name"
+              autoFocus
               value={this.state.name}
               onChange={this.handleChange}
               required
@@ -113,7 +114,7 @@ class ContactForm extends React.Component {
           </label>
         </p>
         <p>
-          <label className="same-line">
+          <label>
             Recipient:{" "}
             <select
               name="recipient"
