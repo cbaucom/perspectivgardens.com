@@ -7,38 +7,7 @@ import SEO from "../components/seo"
 import Card from "../components/card"
 import Container from "../components/container"
 
-const Title = styled.h1`
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-size: ${({theme}) => theme.fontSize.xxlarge};
-  font-weight: 100;
-  color: ${({theme}) => theme.colors.primary.default};
-  text-align: center;
-`
-
-const ServicesContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  width: 100%;
-
-  @supports (display: grid) {
-    display: grid;
-    justify-items: center;
-    grid-template-columns: 1fr;
-    grid-gap: 1rem;
-    align-items: stretch;
-    padding-bottom: 1rem;
-    margin: 0 10px;
-
-    @media (min-width: ${({theme}) => theme.breakpoints.tablet}) {
-      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    }
-  }
-`
-
-const Services = () => {
+function Services() {
   const data = useStaticQuery(graphql`
     {
       allMarkdownRemark(sort: { fields: frontmatter___id }) {
@@ -78,3 +47,35 @@ const Services = () => {
 }
 
 export default Services
+
+// Component Styles
+const Title = styled.h1`
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: ${({ theme }) => theme.fontSize.xxlarge};
+  font-weight: 100;
+  color: ${({ theme }) => theme.colors.primary.default};
+  text-align: center;
+`
+
+const ServicesContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+
+  @supports (display: grid) {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+    align-items: stretch;
+    padding-bottom: 1rem;
+    margin: 0 10px;
+
+    @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    }
+  }
+`

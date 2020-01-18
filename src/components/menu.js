@@ -3,6 +3,32 @@ import { bool } from "prop-types"
 import styled from "styled-components"
 import { Link } from "gatsby"
 
+Menu.propTypes = {
+  open: bool.isRequired,
+}
+
+function Menu({ open, ...props }) {
+  const isHidden = open ? true : false
+  const tabIndex = isHidden ? 0 : -1
+
+  return (
+    <StyledMenu open={open} aria-hidden={!isHidden} {...props}>
+      <StyledLink to="/about" tabIndex={tabIndex}>
+        About
+      </StyledLink>
+      <StyledLink to="/services" tabIndex={tabIndex}>
+        Services
+      </StyledLink>
+      <StyledLink to="/contact" tabIndex={tabIndex}>
+        Contact
+      </StyledLink>
+    </StyledMenu>
+  )
+}
+
+export default Menu
+
+// Component Styles
 const StyledMenu = styled.nav`
   display: flex;
   flex-direction: column;
@@ -45,28 +71,3 @@ const StyledLink = styled(Link)`
     color: ${({ theme }) => theme.colors.white.light};
   }
 `
-
-const Menu = ({ open, ...props }) => {
-  const isHidden = open ? true : false
-  const tabIndex = isHidden ? 0 : -1
-
-  return (
-    <StyledMenu open={open} aria-hidden={!isHidden} {...props}>
-      <StyledLink to="/about" tabIndex={tabIndex}>
-        About
-      </StyledLink>
-      <StyledLink to="/services" tabIndex={tabIndex}>
-        Services
-      </StyledLink>
-      <StyledLink to="/contact" tabIndex={tabIndex}>
-        Contact
-      </StyledLink>
-    </StyledMenu>
-  )
-}
-
-Menu.propTypes = {
-  open: bool.isRequired,
-}
-
-export default Menu

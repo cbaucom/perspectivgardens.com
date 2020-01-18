@@ -7,12 +7,72 @@ import SEO from "../components/seo"
 import ContactForm from "../components/contact-form"
 import Container from "../components/container"
 
+function Contact() {
+  return (
+    <Layout>
+      <SEO title="Contact | Perspectiv Gardens" />
+      <Container>
+        <Title>Contact</Title>
+
+        <FormWrapper>
+          <h3>
+            Please fill out the form below and we will get back to you as soon
+            as possible.
+          </h3>
+          <Card>
+            <h3>Request to book</h3>
+            <ContactForm />
+          </Card>
+        </FormWrapper>
+
+        <InfoWrapper>
+          <SectionWrapper>
+            <div className="icon-wrapper">
+              <FiPhoneCall />
+            </div>
+            <div className="text-wrapper">
+              <h4>
+                <a href="tel:1-214-560-0265">Give us a call</a>
+              </h4>
+              <p>
+                Give us a call at{" "}
+                <a href="tel:1-214-560-0265">(214) 560-0265</a> and let's
+                schedule an appointment!
+              </p>
+            </div>
+          </SectionWrapper>
+          <SectionWrapper>
+            <div className="icon-wrapper">
+              <FiMail />
+            </div>
+            <div className="text-wrapper">
+              <h4>
+                <a href="mailto:perspectivgardens@gmail.com">
+                  Send us an email
+                </a>
+              </h4>
+              <p>
+                Perspectiv Gardens prides itself on providing excellent quality
+                and care for all your lawn care and landscaping needs. Contact
+                us today for a free quote!
+              </p>
+            </div>
+          </SectionWrapper>
+        </InfoWrapper>
+      </Container>
+    </Layout>
+  )
+}
+
+export default Contact
+
+// Component Styles
 const Title = styled.h1`
   text-transform: uppercase;
   letter-spacing: 3px;
-  font-size: ${({theme}) => theme.fontSize.xxlarge};
+  font-size: ${({ theme }) => theme.fontSize.xxlarge};
   font-weight: 100;
-  color: ${({theme}) => theme.colors.primary.default};
+  color: ${({ theme }) => theme.colors.primary.default};
   text-align: center;
 `
 
@@ -25,7 +85,7 @@ const FormWrapper = styled.div`
   flex-direction: column;
   text-align: center;
 
-  @media (min-width: ${({theme}) => theme.breakpoints.phone}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.phone}) {
     padding: 2rem 1rem;
   }
 
@@ -69,7 +129,7 @@ const FormWrapper = styled.div`
     grid-template-columns: 1fr;
     align-items: baseline;
     margin: 0.5rem 0;
-    @media (min-width: ${({theme}) => theme.breakpoints.phone}) {
+    @media (min-width: ${({ theme }) => theme.breakpoints.phone}) {
       grid-template-columns: 1fr 5fr;
     }
   }
@@ -106,7 +166,7 @@ const InfoWrapper = styled.div`
     padding: 1rem;
     width: 100%;
 
-    @media (max-width: ${({theme}) => theme.breakpoints.tablet}) {
+    @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
       grid-template-columns: 1fr;
     }
   }
@@ -120,7 +180,7 @@ const InfoWrapper = styled.div`
   }
   a {
     text-decoration: none;
-    color: ${({theme}) => theme.colors.primary.default};
+    color: ${({ theme }) => theme.colors.primary.default};
   }
   .contact-text-wrapper,
   .info {
@@ -140,14 +200,14 @@ const SectionWrapper = styled.div`
   width: 100%;
   flex: 1 1 100%;
 
-  @media (min-width: ${({theme}) => theme.breakpoints.phone}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.phone}) {
     flex: 1 1 40%;
     margin: 2rem 0.5rem;
   }
   h4 {
     margin-bottom: 0.5rem;
     a {
-      color: ${({theme}) => theme.colors.primary.default};
+      color: ${({ theme }) => theme.colors.primary.default};
       font-size: 1.4rem;
     }
   }
@@ -161,7 +221,7 @@ const SectionWrapper = styled.div`
       height: 35px;
       width: 35px;
       margin: 0 10px 0 0;
-      color: ${({theme}) => theme.colors.primary.default};
+      color: ${({ theme }) => theme.colors.primary.default};
     }
   }
 
@@ -178,61 +238,9 @@ const SectionWrapper = styled.div`
 
     a {
       &:hover {
-        color: ${({theme}) => theme.colors.primary.light};
-        border-bottom: 2px solid ${({theme}) => theme.colors.primary.light};
+        color: ${({ theme }) => theme.colors.primary.light};
+        border-bottom: 2px solid ${({ theme }) => theme.colors.primary.light};
       }
     }
   }
 `
-
-export default () => (
-  <Layout>
-    <SEO title="Contact | Perspectiv Gardens" />
-    <Container>
-      <Title>Contact</Title>
-
-      <FormWrapper>
-        <h3>
-          Please fill out the form below and we will get back to you as soon as
-          possible.
-        </h3>
-        <Card>
-          <h3>Request to book</h3>
-          <ContactForm />
-        </Card>
-      </FormWrapper>
-
-      <InfoWrapper>
-        <SectionWrapper>
-          <div className="icon-wrapper">
-            <FiPhoneCall />
-          </div>
-          <div className="text-wrapper">
-            <h4>
-              <a href="tel:1-214-560-0265">Give us a call</a>
-            </h4>
-            <p>
-              Give us a call at <a href="tel:1-214-560-0265">(214) 560-0265</a>{" "}
-              and let's schedule an appointment!
-            </p>
-          </div>
-        </SectionWrapper>
-        <SectionWrapper>
-          <div className="icon-wrapper">
-            <FiMail />
-          </div>
-          <div className="text-wrapper">
-            <h4>
-              <a href="mailto:perspectivgardens@gmail.com">Send us an email</a>
-            </h4>
-            <p>
-              Perspectiv Gardens prides itself on providing excellent quality
-              and care for all your lawn care and landscaping needs. Contact us
-              today for a free quote!
-            </p>
-          </div>
-        </SectionWrapper>
-      </InfoWrapper>
-    </Container>
-  </Layout>
-)

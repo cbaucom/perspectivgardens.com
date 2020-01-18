@@ -6,6 +6,19 @@ import { buttonStyles } from "../components/button"
 
 import bgImg from "../images/homepage-hero.jpg"
 
+function FrontpageHero() {
+  return (
+    <Wrapper>
+      <Title>Perspectiv Gardens</Title>
+      <SubTitle>Lawncare and Landscaping</SubTitle>
+      <StyledLink to="contact">Request a Free Quote</StyledLink>
+    </Wrapper>
+  )
+}
+
+export default FrontpageHero
+
+// Component Styles
 const StyledLink = styled(Link)`
   ${buttonStyles}
   width: 270px;
@@ -31,14 +44,14 @@ const Title = styled.h1`
   letter-spacing: 3px;
   font-size: 2.5rem;
   font-weight: 400;
-  color: ${({theme}) => theme.colors.white.light};
+  color: ${({ theme }) => theme.colors.white.light};
   text-align: center;
 
-  @media (min-width: ${({theme}) => theme.breakpoints.phone}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.phone}) {
     font-size: 3rem;
   }
 
-  @media (min-width: ${({theme}) => theme.breakpoints.tablet}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
     font-size: 4rem;
   }
 `
@@ -48,25 +61,15 @@ const SubTitle = styled.h2`
   letter-spacing: 3px;
   font-size: 1.75rem;
   font-weight: 400;
-  color: ${({theme}) => theme.colors.white.default};
+  color: ${({ theme }) => theme.colors.white.default};
   text-align: center;
   padding-bottom: 4rem;
 
-  @media (min-width: ${({theme}) => theme.breakpoints.phone}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.phone}) {
     font-size: 2rem;
   }
 
-  @media (min-width: ${({theme}) => theme.breakpoints.tablet}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
     font-size: 3rem;
   }
 `
-
-const FrontpageHero = () => (
-  <Wrapper>
-    <Title>Perspectiv Gardens</Title>
-    <SubTitle>Lawncare and Landscaping</SubTitle>
-    <StyledLink to="contact">Request a Free Quote</StyledLink>
-  </Wrapper>
-)
-
-export default FrontpageHero

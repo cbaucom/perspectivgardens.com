@@ -7,39 +7,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Container from "../components/container"
 
-const Title = styled.h1`
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-size: ${({theme}) => theme.fontSize.xxlarge};
-  font-weight: 100;
-  color: ${({theme}) => theme.colors.primary.default};
-  text-align: center;
-`
-
-const SubTitle = styled.h3`
-  margin: 1.25rem auto;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-weight: 100;
-  color: ${({theme}) => theme.colors.primary.default};
-  text-align: center;
-`
-
-const ImageWrapper = styled.div`
-  width: 100%;
-  padding: 1rem;
-  margin: 0 auto 2rem;
-`
-
-const Text = styled.p`
-  font-size: ${({theme}) => theme.fontSize.xlarge};
-  line-height: 2.25rem;
-  text-align: center;
-  padding: 1rem;
-  width: 100%;
-`
-
-const About = () => {
+function About() {
   const data = useStaticQuery(graphql`
     query {
       placeholderImage: file(relativePath: { eq: "about.jpg" }) {
@@ -79,3 +47,36 @@ const About = () => {
 }
 
 export default About
+
+// Component Styles
+const Title = styled.h1`
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: ${({ theme }) => theme.fontSize.xxlarge};
+  font-weight: 100;
+  color: ${({ theme }) => theme.colors.primary.default};
+  text-align: center;
+`
+
+const SubTitle = styled.h3`
+  margin: 1.25rem auto;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 100;
+  color: ${({ theme }) => theme.colors.primary.default};
+  text-align: center;
+`
+
+const ImageWrapper = styled.div`
+  width: 100%;
+  padding: 1rem;
+  margin: 0 auto 2rem;
+`
+
+const Text = styled.p`
+  font-size: ${({ theme }) => theme.fontSize.xlarge};
+  line-height: 2.25rem;
+  text-align: center;
+  padding: 1rem;
+  width: 100%;
+`

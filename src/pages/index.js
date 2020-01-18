@@ -8,32 +8,35 @@ import Gallery from "../components/gallery"
 import FrontpageHero from "../components/frontpage-hero"
 import Reviews from "../components/reviews"
 
+function IndexPage() {
+  return (
+    <Layout>
+      <SEO title="Home | Perspectiv Gardens" />
+      <Container>
+        <FrontpageHero />
+        <Content>
+          <FrontpageServices />
+          <Reviews />
+          <Gallery />
+        </Content>
+      </Container>
+    </Layout>
+  )
+}
+
+export default IndexPage
+
+// Component Styles
 const Container = styled.div`
   margin-top: 10px;
 
-  @media (min-width: ${({theme}) => theme.breakpoints.phone}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.phone}) {
     margin-top: 100px;
   }
 `
 
 const Content = styled.section`
   margin: 0 auto;
-  max-width: ${({theme}) => theme.maxWidth};
+  max-width: ${({ theme }) => theme.maxWidth};
   padding: 0.5rem 1rem;
 `
-
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home | Perspectiv Gardens" />
-    <Container>
-      <FrontpageHero />
-      <Content>
-        <FrontpageServices />
-        <Reviews />
-        <Gallery />
-      </Content>
-    </Container>
-  </Layout>
-)
-
-export default IndexPage

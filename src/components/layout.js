@@ -1,7 +1,8 @@
 import React from "react"
 import Helmet from "react-helmet"
-import PropTypes from "prop-types"
+import { node } from "prop-types"
 import styled, { createGlobalStyle, ThemeProvider } from "styled-components"
+
 import reset from "../styles/reset"
 import headroom from "../styles/headroom"
 import theme from "../styles/theme"
@@ -14,7 +15,11 @@ const GlobalStyle = createGlobalStyle`
   ${headroom}
 `
 
-const Layout = ({ children }) => {
+Layout.propTypes = {
+  children: node.isRequired,
+}
+
+function Layout({ children }) {
   return (
     <ThemeProvider theme={theme}>
       <Helmet
@@ -46,10 +51,9 @@ const Layout = ({ children }) => {
   )
 }
 
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-}
+export default Layout
 
+// Component Styles
 const LayoutContainer = styled.div`
   margin: 0 auto;
   display: flex;
@@ -63,5 +67,3 @@ const MainContainer = styled.main`
   margin: 0 auto;
   width: 100%;
 `
-
-export default Layout
