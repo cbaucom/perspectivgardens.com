@@ -18,9 +18,9 @@ const Wrapper = styled.section`
 const Title = styled.h2`
   text-transform: uppercase;
   letter-spacing: 3px;
-  font-size: ${props => props.theme.fontSize.xxlarge};
+  font-size: ${({theme}) => theme.fontSize.xxlarge};
   font-weight: 100;
-  color: ${props => props.theme.colors.primary.default};
+  color: ${({theme}) => theme.colors.primary.default};
   text-align: center;
   padding-bottom: 2rem;
 `
@@ -40,7 +40,7 @@ const ServicesContainer = styled.div`
     padding-bottom: 1rem;
     margin: 0 10px;
 
-    @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+    @media (min-width: ${({theme}) => theme.breakpoints.tablet}) {
       grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     }
   }

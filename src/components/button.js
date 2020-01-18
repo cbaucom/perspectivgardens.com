@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components"
 
 export const buttonStyles = css`
-  background: ${props => props.theme.colors.primary.default};
+  background: ${({theme}) => theme.colors.primary.default};
   border: none;
   width: 100px;
   height: 50px;
@@ -11,14 +11,14 @@ export const buttonStyles = css`
   justify-content: center;
   border-radius: 10px;
   font-size: 1.25rem;
-  color: ${props => props.theme.colors.white.default};
+  color: ${({theme}) => theme.colors.white.default};
   padding: 0.25rem 1rem;
-  transition: all ${props => props.theme.transitions.normal};
+  transition: all ${({theme}) => theme.transitions.normal};
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.31);
 
   &:hover {
-    background: ${props => props.theme.colors.primary.light};
-    color: ${props => props.theme.colors.white.default};
+    background: ${({theme}) => theme.colors.primary.light};
+    color: ${({theme}) => theme.colors.white.default};
     cursor: pointer;
     transform: translateY(-2px);
     box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.51);
@@ -30,7 +30,7 @@ export const buttonStyles = css`
     width: 20px;
     height: 20px;
     margin-right: 0.75rem;
-    fill: ${props => props.theme.colors.white.default};
+    fill: ${({theme}) => theme.colors.white.default};
   }
 `
 

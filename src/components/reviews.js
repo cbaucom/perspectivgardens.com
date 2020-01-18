@@ -11,9 +11,9 @@ const Wrapper = styled.section`
 const Title = styled.h1`
   text-transform: uppercase;
   letter-spacing: 3px;
-  font-size: ${props => props.theme.fontSize.xxlarge};
+  font-size: ${({theme}) => theme.fontSize.xxlarge};
   font-weight: 100;
-  color: ${props => props.theme.colors.primary.default};
+  color: ${({theme}) => theme.colors.primary.default};
   text-align: center;
 `
 
@@ -29,7 +29,7 @@ const ReviewsContainer = styled.div`
   .review:not(:first-child) {
     flex: 1 1 100%;
 
-    @media (min-width: ${props => props.theme.breakpoints.phone}) {
+    @media (min-width: ${({theme}) => theme.breakpoints.phone}) {
       flex: 1 1 40%;
     }
   }
@@ -47,7 +47,7 @@ const IconContainer = styled.div`
   margin: -30px auto 0;
 
   svg {
-    color: ${props => props.theme.colors.primary.default};
+    color: ${({theme}) => theme.colors.primary.default};
   }
 `
 
@@ -63,7 +63,7 @@ const StyledCard = styled.article`
   text-align: center;
   width: 100%;
   border-radius: 5px;
-  border-top: 5px solid ${props => props.theme.colors.primary.default};
+  border-top: 5px solid ${({theme}) => theme.colors.primary.default};
   transition: 0.25s;
   &:hover {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
@@ -87,7 +87,7 @@ const StyledCard = styled.article`
     margin: 0 0 20px;
   }
 
-  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+  @media (min-width: ${({theme}) => theme.breakpoints.tablet}) {
     height: auto;
   }
 `

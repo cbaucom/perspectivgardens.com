@@ -10,7 +10,7 @@ const headroom = css`
   .headroom {
     margin: 0 auto;
     background-color: ${theme.colors.white.light};
-    font-size: ${props => props.theme.fontSize.large};
+    font-size: ${({theme}) => theme.fontSize.large};
     padding: 15px 1rem;
     width: 100%;
     svg {

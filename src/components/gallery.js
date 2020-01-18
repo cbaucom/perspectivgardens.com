@@ -10,9 +10,9 @@ const Wrapper = styled.section`
 const Title = styled.h2`
   text-transform: uppercase;
   letter-spacing: 3px;
-  font-size: ${props => props.theme.fontSize.xxlarge};
+  font-size: ${({theme}) => theme.fontSize.xxlarge};
   font-weight: 100;
-  color: ${props => props.theme.colors.primary.default};
+  color: ${({theme}) => theme.colors.primary.default};
   text-align: center;
   padding-bottom: 2rem;
 `
@@ -43,7 +43,7 @@ const Item = styled.div`
   /* flex: 1 1 100%; */
   width: 100%;
 
-  @media (min-width: ${props => props.theme.breakpoints.phone}) {
+  @media (min-width: ${({theme}) => theme.breakpoints.phone}) {
     flex: 1 1 40%;
   }
 `

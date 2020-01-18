@@ -31,14 +31,14 @@ const Title = styled.h1`
   letter-spacing: 3px;
   font-size: 2.5rem;
   font-weight: 400;
-  color: ${props => props.theme.colors.white.light};
+  color: ${({theme}) => theme.colors.white.light};
   text-align: center;
 
-  @media (min-width: ${props => props.theme.breakpoints.phone}) {
+  @media (min-width: ${({theme}) => theme.breakpoints.phone}) {
     font-size: 3rem;
   }
 
-  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+  @media (min-width: ${({theme}) => theme.breakpoints.tablet}) {
     font-size: 4rem;
   }
 `
@@ -48,15 +48,15 @@ const SubTitle = styled.h2`
   letter-spacing: 3px;
   font-size: 1.75rem;
   font-weight: 400;
-  color: ${props => props.theme.colors.white.default};
+  color: ${({theme}) => theme.colors.white.default};
   text-align: center;
   padding-bottom: 4rem;
 
-  @media (min-width: ${props => props.theme.breakpoints.phone}) {
+  @media (min-width: ${({theme}) => theme.breakpoints.phone}) {
     font-size: 2rem;
   }
 
-  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
+  @media (min-width: ${({theme}) => theme.breakpoints.tablet}) {
     font-size: 3rem;
   }
 `

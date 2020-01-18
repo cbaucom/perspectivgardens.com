@@ -10,9 +10,9 @@ import Container from "../components/container"
 const Title = styled.h1`
   text-transform: uppercase;
   letter-spacing: 3px;
-  font-size: ${props => props.theme.fontSize.xxlarge};
+  font-size: ${({theme}) => theme.fontSize.xxlarge};
   font-weight: 100;
-  color: ${props => props.theme.colors.primary.default};
+  color: ${({theme}) => theme.colors.primary.default};
   text-align: center;
 `
 
@@ -25,7 +25,7 @@ const FormWrapper = styled.div`
   flex-direction: column;
   text-align: center;
 
-  @media (min-width: ${props => props.theme.breakpoints.phone}) {
+  @media (min-width: ${({theme}) => theme.breakpoints.phone}) {
     padding: 2rem 1rem;
   }
 
@@ -69,7 +69,7 @@ const FormWrapper = styled.div`
     grid-template-columns: 1fr;
     align-items: baseline;
     margin: 0.5rem 0;
-    @media (min-width: ${props => props.theme.breakpoints.phone}) {
+    @media (min-width: ${({theme}) => theme.breakpoints.phone}) {
       grid-template-columns: 1fr 5fr;
     }
   }
@@ -106,7 +106,7 @@ const InfoWrapper = styled.div`
     padding: 1rem;
     width: 100%;
 
-    @media (max-width: ${props => props.theme.breakpoints.tablet}) {
+    @media (max-width: ${({theme}) => theme.breakpoints.tablet}) {
       grid-template-columns: 1fr;
     }
   }
@@ -120,7 +120,7 @@ const InfoWrapper = styled.div`
   }
   a {
     text-decoration: none;
-    color: ${props => props.theme.colors.primary.default};
+    color: ${({theme}) => theme.colors.primary.default};
   }
   .contact-text-wrapper,
   .info {
@@ -140,14 +140,14 @@ const SectionWrapper = styled.div`
   width: 100%;
   flex: 1 1 100%;
 
-  @media (min-width: ${props => props.theme.breakpoints.phone}) {
+  @media (min-width: ${({theme}) => theme.breakpoints.phone}) {
     flex: 1 1 40%;
     margin: 2rem 0.5rem;
   }
   h4 {
     margin-bottom: 0.5rem;
     a {
-      color: ${props => props.theme.colors.primary.default};
+      color: ${({theme}) => theme.colors.primary.default};
       font-size: 1.4rem;
     }
   }
@@ -161,7 +161,7 @@ const SectionWrapper = styled.div`
       height: 35px;
       width: 35px;
       margin: 0 10px 0 0;
-      color: ${props => props.theme.colors.primary.default};
+      color: ${({theme}) => theme.colors.primary.default};
     }
   }
 
@@ -178,8 +178,8 @@ const SectionWrapper = styled.div`
 
     a {
       &:hover {
-        color: ${props => props.theme.colors.primary.light};
-        border-bottom: 2px solid ${props => props.theme.colors.primary.light};
+        color: ${({theme}) => theme.colors.primary.light};
+        border-bottom: 2px solid ${({theme}) => theme.colors.primary.light};
       }
     }
   }

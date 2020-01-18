@@ -12,14 +12,14 @@ import Menu from "./menu"
 
 const Wrapper = styled.div`
   margin: 0 auto;
-  max-width: ${props => props.theme.maxWidth};
+  max-width: ${({theme}) => theme.maxWidth};
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
   width: 100%;
 
-  @media (max-width: ${props => props.theme.breakpoints.phone}) {
+  @media (max-width: ${({theme}) => theme.breakpoints.phone}) {
     justify-content: center;
   }
 `
@@ -34,7 +34,7 @@ const StyledLink = styled(Link)`
     margin-bottom: 0;
   }
 
-  @media (max-width: ${props => props.theme.breakpoints.phone}) {
+  @media (max-width: ${({theme}) => theme.breakpoints.phone}) {
     height: 50px;
     width: 100px;
   }
@@ -56,10 +56,10 @@ const PhoneLink = styled.div`
     height: 35px !important;
     width: 35px !important;
     margin: 0;
-    color: ${props => props.theme.colors.primary.default};
+    color: ${({theme}) => theme.colors.primary.default};
   }
 
-  @media (min-width: ${props => props.theme.breakpoints.phone}) {
+  @media (min-width: ${({theme}) => theme.breakpoints.phone}) {
     display: none;
   }
 `
@@ -67,31 +67,31 @@ const PhoneLink = styled.div`
 const Nav = styled.nav`
   display: flex;
   justify-content: flex-end;
-  font-size: ${props => props.theme.fontSize.xlarge};
-  font-family: ${props => props.theme.fontFamily.heading};
+  font-size: ${({theme}) => theme.fontSize.xlarge};
+  font-family: ${({theme}) => theme.fontFamily.heading};
   align-items: center;
   a {
-    color: ${props => props.theme.colors.white.default};
+    color: ${({theme}) => theme.colors.white.default};
     margin-left: 2rem;
     width: auto;
-    transition: all ${props => props.theme.transitions.normal};
+    transition: all ${({theme}) => theme.transitions.normal};
     &:hover {
-      color: ${props => props.theme.colors.white.dark};
+      color: ${({theme}) => theme.colors.white.dark};
     }
     &:focus {
-      color: ${props => props.theme.colors.white.default};
+      color: ${({theme}) => theme.colors.white.default};
     }
 
-    @media (max-width: ${props => props.theme.breakpoints.phone}) {
+    @media (max-width: ${({theme}) => theme.breakpoints.phone}) {
       margin-left: 1rem;
     }
   }
 
-  @media (max-width: ${props => props.theme.breakpoints.tablet}) {
-    font-size: ${props => props.theme.fontSize.large};
+  @media (max-width: ${({theme}) => theme.breakpoints.tablet}) {
+    font-size: ${({theme}) => theme.fontSize.large};
   }
 
-  @media (max-width: ${props => props.theme.breakpoints.phone}) {
+  @media (max-width: ${({theme}) => theme.breakpoints.phone}) {
     display: none;
   }
 `

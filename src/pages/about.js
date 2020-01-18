@@ -10,9 +10,9 @@ import Container from "../components/container"
 const Title = styled.h1`
   text-transform: uppercase;
   letter-spacing: 3px;
-  font-size: ${props => props.theme.fontSize.xxlarge};
+  font-size: ${({theme}) => theme.fontSize.xxlarge};
   font-weight: 100;
-  color: ${props => props.theme.colors.primary.default};
+  color: ${({theme}) => theme.colors.primary.default};
   text-align: center;
 `
 
@@ -21,7 +21,7 @@ const SubTitle = styled.h3`
   text-transform: uppercase;
   letter-spacing: 3px;
   font-weight: 100;
-  color: ${props => props.theme.colors.primary.default};
+  color: ${({theme}) => theme.colors.primary.default};
   text-align: center;
 `
 
@@ -32,7 +32,7 @@ const ImageWrapper = styled.div`
 `
 
 const Text = styled.p`
-  font-size: ${props => props.theme.fontSize.xlarge};
+  font-size: ${({theme}) => theme.fontSize.xlarge};
   line-height: 2.25rem;
   text-align: center;
   padding: 1rem;

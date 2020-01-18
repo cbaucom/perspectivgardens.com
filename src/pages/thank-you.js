@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 const Container = styled.div`
-  background: ${props => props.theme.colors.bg};
+  background: ${({theme}) => theme.colors.bg};
   margin: 150px auto 0;
   padding: 2rem;
   width: 100%;
@@ -24,11 +24,11 @@ const Container = styled.div`
 
 const StyledLink = styled(Link)`
   appearance: none;
-  background: ${props => props.theme.colors.primary.default};
-  border: 1px solid ${props => props.theme.colors.primary.light};
-  box-shadow: 0 1px 5px 0 ${props => props.theme.colors.primary.dark},
-    inset 0 1px 0 0 ${props => props.theme.colors.primary.dark},
-    inset 0 2px 4px 0 ${props => props.theme.colors.primary.dark};
+  background: ${({theme}) => theme.colors.primary.default};
+  border: 1px solid ${({theme}) => theme.colors.primary.light};
+  box-shadow: 0 1px 5px 0 ${({theme}) => theme.colors.primary.dark},
+    inset 0 1px 0 0 ${({theme}) => theme.colors.primary.dark},
+    inset 0 2px 4px 0 ${({theme}) => theme.colors.primary.dark};
   border-radius: 10px;
   color: #fff;
   cursor: pointer;
@@ -46,8 +46,8 @@ const StyledLink = styled(Link)`
   width: 100%;
   &:hover {
     transform: scale(1.01);
-    box-shadow: 0 8px 18px ${props => props.theme.colors.primary.dark},
-      inset 0 2px 1px ${props => props.theme.colors.primary.dark};
+    box-shadow: 0 8px 18px ${({theme}) => theme.colors.primary.dark},
+      inset 0 2px 1px ${({theme}) => theme.colors.primary.dark};
   }
 `
 export default props => {

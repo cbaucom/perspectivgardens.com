@@ -11,14 +11,14 @@ import Reviews from "../components/reviews"
 const Container = styled.div`
   margin-top: 10px;
 
-  @media (min-width: ${props => props.theme.breakpoints.phone}) {
+  @media (min-width: ${({theme}) => theme.breakpoints.phone}) {
     margin-top: 100px;
   }
 `
 
 const Content = styled.section`
   margin: 0 auto;
-  max-width: ${props => props.theme.maxWidth};
+  max-width: ${({theme}) => theme.maxWidth};
   padding: 0.5rem 1rem;
 `
 

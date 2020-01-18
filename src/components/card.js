@@ -8,7 +8,7 @@ const StyledCard = styled.article`
   margin: 2rem auto;
   padding-bottom: 1rem;
   border-radius: 5px;
-  border-top: 5px solid ${props => props.theme.colors.primary.default};
+  border-top: 5px solid ${({theme}) => theme.colors.primary.default};
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
   transition: 0.25s;
   width: 100%;
@@ -18,7 +18,7 @@ const StyledCard = styled.article`
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
   }
 
-  @media (min-width: ${props => props.theme.breakpoints.phone}) {
+  @media (min-width: ${({theme}) => theme.breakpoints.phone}) {
     flex: 1 1 40%;
     height: 700px;
     margin: 2rem 0.5rem;

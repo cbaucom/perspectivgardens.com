@@ -40,7 +40,7 @@ const StyledBurger = styled.button`
     }
   }
 
-  @media (min-width: ${props => props.theme.breakpoints.phone}) {
+  @media (min-width: ${({theme}) => theme.breakpoints.phone}) {
     display: none;
   }
 `

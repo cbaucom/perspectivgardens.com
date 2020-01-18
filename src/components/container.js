@@ -8,7 +8,7 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  max-width: ${props => props.theme.maxWidth};
+  max-width: ${({theme}) => theme.maxWidth};
 `
 
 export default Container

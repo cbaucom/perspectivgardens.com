@@ -6,7 +6,7 @@ import styled from "styled-components"
 import logo from "../images/PG_Logo2.1_Green_cropped.png"
 
 const Wrapper = styled.header`
-  /* background: ${props => props.theme.colors.primary.dark}; */
+  /* background: ${({theme}) => theme.colors.primary.dark}; */
   margin-bottom: 1.25rem;
   width: 100vw;
   /* max-height: 120px; */
@@ -15,7 +15,7 @@ const Wrapper = styled.header`
 
 const Content = styled.div`
   margin: 0 auto;
-  max-width: ${props => props.theme.maxWidth};
+  max-width: ${({theme}) => theme.maxWidth};
   padding: 0.5rem 1rem;
   display: flex;
   /* justify-content: center; */
