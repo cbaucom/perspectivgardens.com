@@ -1,12 +1,11 @@
 import React from "react"
 import styled from "styled-components"
+import { useStaticQuery, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Card from "../components/card"
 import Container from "../components/container"
-
-import services from "../data/services"
 
 const Title = styled.h1`
   text-transform: uppercase;
@@ -39,18 +38,43 @@ const ServicesContainer = styled.div`
   }
 `
 
-const Services = () => (
-  <Layout>
-    <SEO title="Services | Perspectiv Gardens" />
-    <Container>
-      <Title>Services</Title>
-      <ServicesContainer>
-        {services.map(service => (
-          <Card key={service.id} {...service} />
-        ))}
-      </ServicesContainer>
-    </Container>
-  </Layout>
-)
+const Services = () => {
+  const data = useStaticQuery(graphql`
+    {
+      allMarkdownRemark(sort: { fields: frontmatter___id }) {
+        edges {
+          node {
+            frontmatter {
+              title
+              description
+              id
+              cover_image {
+                childImageSharp {
+                  fluid {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  return (
+    <Layout>
+      <SEO title="Services | Perspectiv Gardens" />
+      <Container>
+        <Title>Services</Title>
+        <ServicesContainer>
+          {data.allMarkdownRemark.edges.map(({ node }) => (
+            <Card key={node.frontmatter.id} {...node} />
+          ))}
+        </ServicesContainer>
+      </Container>
+    </Layout>
+  )
+}
 
 export default Services

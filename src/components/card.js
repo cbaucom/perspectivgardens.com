@@ -25,13 +25,11 @@ const StyledCard = styled.article`
   }
 `
 
-const Card = props => {
-  return (
-    <StyledCard>
-      <CardHeader image={props.image} />
-      <CardBody name={props.name} description={props.description} />
-    </StyledCard>
-  )
-}
+const Card = ({ frontmatter }) => (
+  <StyledCard>
+    <CardHeader frontmatter={frontmatter} />
+    <CardBody name={frontmatter.title} description={frontmatter.description} />
+  </StyledCard>
+)
 
 export default Card

@@ -1,25 +1,24 @@
 import React from "react"
 import styled from "styled-components"
+import Img from "gatsby-image"
 
 const StyledCardHeader = styled.header`
-  padding: 15px;
-  height: 50%;
-  img {
-    width: 100%;
-    background-size: cover;
-    background-position: center;
-    object-fit: cover;
+  padding: 1rem;
+  height: 350px;
 
-    @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-      height: 300px;
-    }
+  .gatsby-image-wrapper {
+    height: 100%;
+    object-fit: contain;
   }
 `
 
-const CardHeader = props => {
-  const { image } = props
-
-  return <StyledCardHeader>{image}</StyledCardHeader>
-}
+const CardHeader = ({ frontmatter }) => (
+  <StyledCardHeader>
+    <Img
+      fluid={frontmatter.cover_image.childImageSharp.fluid}
+      alt={frontmatter.title}
+    />
+  </StyledCardHeader>
+)
 
 export default CardHeader

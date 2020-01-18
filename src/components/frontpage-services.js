@@ -1,11 +1,10 @@
 import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 
 import Card from "../components/card"
 import { buttonStyles } from "../components/button"
-
-import services from "../data/services"
 
 const StyledLink = styled(Link)`
   ${buttonStyles}
@@ -47,16 +46,41 @@ const ServicesContainer = styled.div`
   }
 `
 
-const FrontpageServices = () => (
-  <Wrapper>
-    <Title>Services</Title>
-    <ServicesContainer>
-      {services.slice(0, 4).map(service => (
-        <Card key={service.id} {...service} />
-      ))}
-    </ServicesContainer>
-    <StyledLink to="services">See all services</StyledLink>
-  </Wrapper>
-)
+const FrontpageServices = () => {
+  const data = useStaticQuery(graphql`
+    {
+      allMarkdownRemark(sort: { fields: frontmatter___id }, limit: 4) {
+        edges {
+          node {
+            frontmatter {
+              title
+              description
+              id
+              cover_image {
+                childImageSharp {
+                  fluid {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  return (
+    <Wrapper>
+      <Title>Services</Title>
+      <ServicesContainer>
+        {data.allMarkdownRemark.edges.map(({ node }) => (
+          <Card key={node.frontmatter.id} {...node} />
+        ))}
+      </ServicesContainer>
+      <StyledLink to="services">See all services</StyledLink>
+    </Wrapper>
+  )
+}
 
 export default FrontpageServices

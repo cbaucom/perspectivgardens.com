@@ -9,8 +9,8 @@ const StyledLink = styled(Link)`
 `
 
 const StyledBody = styled.div`
-  padding: 15px;
-  height: 50%;
+  padding: 1rem 1rem 1.25rem 1rem;
+  height: 350px;
   background-color: #fff;
   width: 100%;
   display: flex;
@@ -23,8 +23,13 @@ const StyledBody = styled.div`
 
   .body-content {
     padding: 1rem 0;
-    font-size: 1.25rem;
-    line-height: 1.8;
+    font-size: 1.2rem;
+    line-height: 1.65;
+
+    @media (min-width: ${props => props.theme.breakpoints.phone}) {
+      font-size: 1.25rem;
+      line-height: 1.8;
+    }
   }
 `
 
