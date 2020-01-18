@@ -27,7 +27,7 @@ const Layout = ({ children }) => {
           {
             name: "keywords",
             content:
-              "lawncare, landscaping, lawn maintainence, perspective gardens, perspectiv gardens ",
+              "lawncare, landscaping, lawn maintainence, perspective gardens, perspectiv gardens, mowing, mowing and edging, rake and bag leaves, shrub and tree trimming, fertilization, weed and insect control, lawn care program, LCP, flagstone, bed maintenance, dallas, rockwall, texas",
           },
           { name: "msapplication-TileColor", content: "#005826" },
           { name: "theme-color", content: "#005826" },
