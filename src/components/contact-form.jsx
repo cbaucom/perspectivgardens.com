@@ -15,6 +15,7 @@ class ContactForm extends React.Component {
       name: "",
       email: "",
       phone: "",
+      location: "",
       recipient: "1",
       service: "Mowing and Edging",
       message: "",
@@ -29,9 +30,9 @@ class ContactForm extends React.Component {
   handleSubmit = e => {
     e.preventDefault()
 
-    if (!this.state.name || !this.state.email || !this.state.phone) {
+    if (!this.state.name || !this.state.email || !this.state.phone || !this.state.location) {
       this.setState(() => ({
-        error: "Please provide your name, email, and phone number",
+        error: "Please provide your name, email, phone number and location",
       }))
     } else {
       // Clear the error
@@ -108,6 +109,19 @@ class ContactForm extends React.Component {
               name="phone"
               autoComplete="tel"
               value={this.state.phone}
+              onChange={this.handleChange}
+              required
+            />
+          </label>
+        </p>
+        <p>
+          <label>
+            Location(city):{" "}
+            <input
+              type="text"
+              name="location"
+              autoComplete="address-level2"
+              value={this.state.location}
               onChange={this.handleChange}
               required
             />
