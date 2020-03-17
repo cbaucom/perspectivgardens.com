@@ -10,7 +10,14 @@ import Container from "../components/container"
 function About() {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "about.jpg" }) {
+      chrisImage: file(relativePath: { eq: "ChrisWithPerspectivShirt.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 600) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      perspectiveImage: file(relativePath: { eq: "about.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200) {
             ...GatsbyImageSharpFluid
@@ -26,21 +33,27 @@ function About() {
       <Container>
         <Title>About Us</Title>
         <SubTitle>A Landscaper with Perspectiv</SubTitle>
+        <MainWrapper>
+          <ImageWrapper>
+            <Img fluid={data.chrisImage.childImageSharp.fluid} />
+          </ImageWrapper>
+          <Text>
+            Perspectiv Gardens is an Award-Winning landscaping company based in
+            Rockwall, Texas. With almost 20 years of experience, you can count
+            on us to perform the kind of the work that will leave your neighbors
+            in awe. The name, "Perspectiv", came from the numerous customers
+            over the years who mentioned the word whenever our work was
+            completed, things like: "I love the perspective you drew up for my
+            wife and I. I never would have thought of going that route in
+            landscaping, but I'm glad we did!" or "I would walk out my back door
+            sometimes and just be lost. I didn't know what to do and what not to
+            do. I needed a landscaper with a different perspective."
+          </Text>
+        </MainWrapper>
+
         <ImageWrapper>
-          <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+          <Img fluid={data.perspectiveImage.childImageSharp.fluid} />
         </ImageWrapper>
-        <Text>
-          Perspectiv Gardens is an Award-Winning landscaping company based in
-          Rockwall, Texas. With almost 20 years of experience, you can count on
-          us to perform the kind of the work that will leave your neighbors in
-          awe. The name, "Perspectiv", came from the numerous customers over the
-          years who mentioned the word whenever our work was completed, things
-          like: "I love the perspective you drew up for my wife and I. I never
-          would have thought of going that route in landscaping, but I'm glad we
-          did!" or "I would walk out my back door sometimes and just be lost. I
-          didn't know what to do and what not to do. I needed a landscaper with
-          a different perspective."
-        </Text>
       </Container>
     </Layout>
   )
@@ -67,16 +80,42 @@ const SubTitle = styled.h3`
   text-align: center;
 `
 
-const ImageWrapper = styled.div`
+const MainWrapper = styled.div`
   width: 100%;
   padding: 1rem;
-  margin: 0 auto 2rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  /* > 600px */
+  @media (min-width: ${({ theme }) => theme.breakpoints.phone}) {
+    flex-direction: row;
+  }
+`
+
+const ImageWrapper = styled.div`
+  width: 100%;
+  object-fit: contain;
+  align-self: flex-start;
+  padding: 1rem;
+  margin: 0 auto;
 `
 
 const Text = styled.p`
-  font-size: ${({ theme }) => theme.fontSize.xlarge};
-  line-height: 2.25rem;
-  text-align: center;
-  padding: 1rem;
+  align-self: flex-start;
+  padding: 1rem 1rem 0 1rem;
   width: 100%;
+  margin-bottom: 0;
+
+  /* 600px - 799px */
+  @media (min-width: ${({ theme }) => theme.breakpoints.phone}) {
+    font-size: calc(1vw + 0.9vh);
+  }
+
+  /* > 800px */
+  @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    font-size: calc(1vw + 1.1vh);
+  }
 `
