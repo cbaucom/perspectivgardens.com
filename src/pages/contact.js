@@ -31,11 +31,11 @@ function Contact() {
             </div>
             <div className="text-wrapper">
               <h4>
-                <a href="tel:1-214-560-0265">Give us a call</a>
+                <a href="tel:1-469-267-9048">Give us a call</a>
               </h4>
               <p>
                 Give us a call at{" "}
-                <a href="tel:1-214-560-0265">(214) 560-0265</a> and let's
+                <a href="tel:1-469-267-9048">(469) 267-9048</a> and let's
                 schedule an appointment!
               </p>
             </div>

@@ -15,7 +15,7 @@ function Footer() {
             <img src={logo} alt="logo" />
           </Link>
         </ImageContainer>
-        <PhoneLink href="tel:1-214-560-0265">(214) 560-0265</PhoneLink>
+        <PhoneLink href="tel:1-469-267-9048">(469) 267-9048</PhoneLink>
         <NavContainer>
           <ul>
             <li>
