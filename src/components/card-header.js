@@ -13,6 +13,8 @@ function CardHeader({ frontmatter }) {
       <Img
         fluid={frontmatter.cover_image.childImageSharp.fluid}
         alt={frontmatter.title}
+        loading="eager"
+        placeholderStyle={{ visibility: "hidden" }}
       />
     </StyledCardHeader>
   )

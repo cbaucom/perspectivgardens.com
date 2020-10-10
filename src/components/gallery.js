@@ -34,6 +34,8 @@ function Gallery() {
               <Img
                 fluid={node.localFile.childImageSharp.fluid}
                 alt={node.name}
+                loading="eager"
+                placeholderStyle={{ visibility: "hidden" }}
               />
             </Item>
           ))}

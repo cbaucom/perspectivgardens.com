@@ -35,7 +35,9 @@ function About() {
         <SubTitle>A Landscaper with Perspectiv</SubTitle>
         <MainWrapper>
           <ImageWrapper>
-            <Img fluid={data.chrisImage.childImageSharp.fluid} />
+            <Img fluid={data.chrisImage.childImageSharp.fluid} alt="Chris Greenlee"
+        loading="eager"
+        placeholderStyle={{ visibility: "hidden" }} />
           </ImageWrapper>
           <Text>
             Perspectiv Gardens is an Award-Winning landscaping company based in
@@ -52,7 +54,9 @@ function About() {
         </MainWrapper>
 
         <ImageWrapper>
-          <Img fluid={data.perspectiveImage.childImageSharp.fluid} />
+          <Img fluid={data.perspectiveImage.childImageSharp.fluid} alt="Logo"
+        loading="eager"
+        placeholderStyle={{ visibility: "hidden" }}/>
         </ImageWrapper>
       </Container>
     </Layout>
