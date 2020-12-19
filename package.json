@@ -64,6 +64,8 @@
     "dev": "gatsby develop -o -H $HOSTNAME -p 8000",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "lint": "eslint --ext .js,.jsx ./src/**/*.{js,jsx}",
+    "lint:fix": "yarn lint --fix",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \""
