@@ -33,9 +33,9 @@ function DesignPage() {
 						and friendly and professional customer service.
 					</Text>
 					<Text>
-						If you would like our team to provide a free landscape design concept to beautify your outdoor
-						space or a free estimate for lawn care and landscaping services, reach out to us today. We look
-						forward to creating your dream landscape!
+						If you would like our team to provide a landscape design concept to beautify your outdoor space
+						or an estimate for lawn care and landscaping services, reach out to us today. We look forward to
+						creating your dream landscape!
 					</Text>
 				</Content>
 			</Container>

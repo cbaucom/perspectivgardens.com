@@ -53,7 +53,7 @@ function MaintenancePage() {
 						Our flower bed cleanup services include weeding, mulching, and removal of any dead plants. We
 						will keep your flower beds beautiful, healthy, and free of weeds and debris. For a new
 						perspective in landscaping and lawn maintenance services, call the team of professionals at
-						Perspectiv Gardens for a free estimate! We look forward to providing you with superior customer
+						Perspectiv Gardens for an estimate! We look forward to providing you with superior customer
 						service and high quality lawn maintenance services.
 					</Text>
 				</Content>
