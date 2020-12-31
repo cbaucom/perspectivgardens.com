@@ -38,7 +38,7 @@ function FrontpageServices() {
 					<Card key={node.frontmatter.id} {...node} />
 				))}
 			</ServicesContainer>
-			<StyledLink to="services">See all services</StyledLink>
+			{/* <StyledLink to="services">See all services</StyledLink> */}
 		</Wrapper>
 	)
 }
