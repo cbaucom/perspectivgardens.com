@@ -10,16 +10,9 @@ import Container from '../components/container'
 function About() {
 	const data = useStaticQuery(graphql`
 		query {
-			chrisImage: file(relativePath: { eq: "ChrisWithPerspectivShirt.jpg" }) {
+			chrisImage: file(relativePath: { eq: "ChrisProfile.jpg" }) {
 				childImageSharp {
 					fluid(maxWidth: 600) {
-						...GatsbyImageSharpFluid
-					}
-				}
-			}
-			perspectiveImage: file(relativePath: { eq: "about.jpg" }) {
-				childImageSharp {
-					fluid(maxWidth: 1200) {
 						...GatsbyImageSharpFluid
 					}
 				}
@@ -52,15 +45,6 @@ function About() {
 						what to do and what not to do. I needed a landscaper with a different perspective."
 					</Text>
 				</MainWrapper>
-
-				<ImageWrapper>
-					<Img
-						fluid={data.perspectiveImage.childImageSharp.fluid}
-						alt="Logo"
-						loading="eager"
-						placeholderStyle={{ visibility: 'hidden' }}
-					/>
-				</ImageWrapper>
 			</Container>
 		</Layout>
 	)
@@ -112,6 +96,7 @@ const ImageWrapper = styled.div`
 
 const Text = styled.p`
 	align-self: flex-start;
+	line-height: 1.5;
 	padding: 1rem 1rem 0 1rem;
 	width: 100%;
 	margin-bottom: 0;
