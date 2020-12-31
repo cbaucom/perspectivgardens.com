@@ -1,11 +1,31 @@
 import React from 'react'
 import styled from 'styled-components'
+import { useStaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image'
 
 import Container from '../components/container'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 
 function DesignPage() {
+	const data = useStaticQuery(graphql`
+		{
+			allFile(filter: { relativeDirectory: { eq: "design" } }) {
+				edges {
+					node {
+						id
+						name
+						childImageSharp {
+							fluid {
+								...GatsbyImageSharpFluid
+							}
+						}
+					}
+				}
+			}
+		}
+	`)
+
 	return (
 		<Layout>
 			<SEO title="Design | Perspectiv Gardens" />
@@ -19,10 +39,9 @@ function DesignPage() {
 						outdoor areas more appealing and enjoyable.
 					</Text>
 					<Text>
-						At Perspectiv Gardens, our design team is truly one of a kind. We take a unique approach in our
-						2D and 3D designs, so the landscapes we design are one of a kind. You might think that designing
-						such imaginative landscaping would take a lot of time, but in reality, our designs are usually
-						ready within 24 hours and we don’t charge extra for all this creativity!
+						At Perspectiv Gardens, our design team is truly special. We take a unique approach in our 2D and
+						3D designs, so the landscapes we design are one of a kind. Best of all, our design team will
+						have it ready for you in 24 hours!
 					</Text>
 					<Text>
 						Our designers use high-tech landscape design software that provides our customers with a virtual
@@ -38,6 +57,20 @@ function DesignPage() {
 						creating your dream landscape!
 					</Text>
 				</Content>
+				<GalleryContainer>
+					<Grid>
+						{data.allFile.edges.map(({ node }) => (
+							<Item key={node.id}>
+								<Img
+									fluid={node.childImageSharp.fluid}
+									alt={node.name}
+									loading="eager"
+									placeholderStyle={{ visibility: 'hidden' }}
+								/>
+							</Item>
+						))}
+					</Grid>
+				</GalleryContainer>
 			</Container>
 		</Layout>
 	)
@@ -56,6 +89,7 @@ const Title = styled.h1`
 	font-size: ${({ theme }) => theme.fontSize.xxlarge};
 	font-weight: 100;
 	letter-spacing: 3px;
+	margin-bottom: 2rem;
 	text-align: center;
 	text-transform: uppercase;
 `
@@ -75,5 +109,35 @@ const Text = styled.p`
 	/* > 800px */
 	@media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
 		font-size: calc(1vw + 1.1vh);
+	}
+`
+const GalleryContainer = styled.div`
+	margin: 0 auto;
+	width: 100%;
+	padding-bottom: 3rem;
+
+	.gatsby-image-wrapper {
+		height: auto;
+		width: 100%;
+		overflow: hidden;
+		background-size: cover;
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+	}
+`
+const Grid = styled.div`
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+`
+
+const Item = styled.div`
+	margin: 1rem 0.5rem;
+	flex: auto;
+	/* flex: 1 1 100%; */
+	width: 100%;
+
+	@media (min-width: ${({ theme }) => theme.breakpoints.phone}) {
+		flex: 1 1 40%;
 	}
 `
