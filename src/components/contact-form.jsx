@@ -132,7 +132,7 @@ class ContactForm extends React.Component {
 						<select name="recipient" value={this.state.recipient} onChange={this.handleChange} required>
 							<option value="New Service Request">New Service Request</option>
 							<option value="Information">Information</option>
-							<option value="Marketing">Marketing</option>
+							<option value="Other">Other</option>
 						</select>
 					</label>
 				</p>
