@@ -18,24 +18,24 @@ const reviews = [
 		description:
 			'Chris and his team did a WONDERFUL job with our backyard. We had weeds, and our lawn was getting neglected. They did a great job cleaning it up. We also hired them to do landscaping around our fence line. They nailed it. It was exactly what we wanted. Couldn’t ask for a better job. We plan on hiring them to redo our entire backyard because he is so knowledgeable and great at what he does. Highly recommend Chris and his team!!',
 	},
-	{
-		id: 4,
-		name: 'Courtney H.',
-		description:
-			'Chris is always quick to get back to me with my questions. Every week I can expect our yard to look “trim” and proper. He has also beautified our landscaping with tending to the flower beds and hand picking flagstone according to my O.C.D. Color requests. I highly recommend his services.',
-	},
-	{
-		id: 5,
-		name: 'Michael W.',
-		description:
-			"Chris has always done a great job with our yard. He goes above and beyond the work he agrees to do. He is always willing to help my wife if she happens to be out side needing assistance with something she couldn't handle herself. I would definitely recommend his services!",
-	},
-	{
-		id: 6,
-		name: 'Cathy B.',
-		description:
-			"I contacted Chris at Perspectiv Gardens and requested that he clean out my small front flower beds, removing all the almost dead annuals and weeds as well as partially prepping the beds for the spring/summer planting next year. Chris was great in listening to my thoughts while also thinking ahead and sharing some ideas for a small revamping of the beds next year. He was very responsive to hearing what I felt was best for the space while encouraging me to consider some enhancements that would make my small beds and yard really pop in my neighborhood! I was pleased with his 'Perspectiv' for my home while still respecting my wishes. Chris is very personable and eludes great customer service. He is respectful of the homeowner and their desires while sharing thoughts and ideas as the professional that he is. I look forward to continuing to work with Chris next spring when we are able to actually see how our collaborative ideas come together.",
-	},
+	// {
+	// 	id: 4,
+	// 	name: 'Courtney H.',
+	// 	description:
+	// 		'Chris is always quick to get back to me with my questions. Every week I can expect our yard to look “trim” and proper. He has also beautified our landscaping with tending to the flower beds and hand picking flagstone according to my O.C.D. Color requests. I highly recommend his services.',
+	// },
+	// {
+	// 	id: 5,
+	// 	name: 'Michael W.',
+	// 	description:
+	// 		"Chris has always done a great job with our yard. He goes above and beyond the work he agrees to do. He is always willing to help my wife if she happens to be out side needing assistance with something she couldn't handle herself. I would definitely recommend his services!",
+	// },
+	// {
+	// 	id: 6,
+	// 	name: 'Cathy B.',
+	// 	description:
+	// 		"I contacted Chris at Perspectiv Gardens and requested that he clean out my small front flower beds, removing all the almost dead annuals and weeds as well as partially prepping the beds for the spring/summer planting next year. Chris was great in listening to my thoughts while also thinking ahead and sharing some ideas for a small revamping of the beds next year. He was very responsive to hearing what I felt was best for the space while encouraging me to consider some enhancements that would make my small beds and yard really pop in my neighborhood! I was pleased with his 'Perspectiv' for my home while still respecting my wishes. Chris is very personable and eludes great customer service. He is respectful of the homeowner and their desires while sharing thoughts and ideas as the professional that he is. I look forward to continuing to work with Chris next spring when we are able to actually see how our collaborative ideas come together.",
+	// },
 ]
 
 export default reviews
