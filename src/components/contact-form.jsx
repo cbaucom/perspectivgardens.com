@@ -140,14 +140,11 @@ class ContactForm extends React.Component {
 					<label>
 						What type of service are you interested in?{' '}
 						<select name="service" value={this.state.service} onChange={this.handleChange} required>
-							<option value="Mowing and Edging">Mowing and Edging</option>
 							<option value="Landscaping">Landscaping</option>
 							<option value="Flagstone">Flagstone</option>
 							<option value="Bed Maintenance">Bed Maintenance</option>
 							<option value="Shrub and Tree Trimming">Shrub and Tree Trimming</option>
 							<option value="Rake and Bag Leaves">Rake and Bag Leaves</option>
-							<option value="Fertilization">Fertilization</option>
-							<option value="Weed and Insect Control">Weed and Insect Control</option>
 						</select>
 					</label>
 				</p>
