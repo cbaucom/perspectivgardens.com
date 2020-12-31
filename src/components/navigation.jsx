@@ -32,6 +32,7 @@ function Navigation() {
 					<StyledLink to="/about">About</StyledLink>
 					<StyledLink to="/design">Design</StyledLink>
 					<StyledLink to="/maintenance">Maintenance</StyledLink>
+					<StyledLink to="/projects">Projects</StyledLink>
 					<StyledLink to="/services">Services</StyledLink>
 					<StyledLink to="/contact">Contact</StyledLink>
 				</Nav>
@@ -54,12 +55,12 @@ const Wrapper = styled.div`
 	max-width: ${({ theme }) => theme.maxWidth};
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: center;
 	flex-direction: row;
 	width: 100%;
 
-	@media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-		justify-content: center;
+	@media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+		justify-content: space-between;
 	}
 `
 
@@ -68,14 +69,19 @@ const StyledLink = styled(Link)`
 	font-weight: 700;
 	align-items: center;
 	svg {
-		height: 100px;
-		width: 150px;
-		margin-bottom: 0;
-	}
-
-	@media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
 		height: 50px;
 		width: 100px;
+		margin-bottom: 0;
+
+		@media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+			height: 75px;
+			width: 125px;
+		}
+
+		@media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
+			height: 100px;
+			width: 150px;
+		}
 	}
 `
 
@@ -104,14 +110,14 @@ const PhoneLink = styled.div`
 `
 
 const Nav = styled.nav`
-	display: flex;
+	display: none;
 	justify-content: flex-end;
-	font-size: ${({ theme }) => theme.fontSize.xlarge};
+	font-size: ${({ theme }) => theme.fontSize.large};
 	font-family: ${({ theme }) => theme.fontFamily.heading};
 	align-items: center;
 	a {
 		color: ${({ theme }) => theme.colors.white.default};
-		margin-left: 2rem;
+		margin-left: 1rem;
 		width: auto;
 		transition: all ${({ theme }) => theme.transitions.normal};
 		&:hover {
@@ -121,16 +127,17 @@ const Nav = styled.nav`
 			color: ${({ theme }) => theme.colors.white.default};
 		}
 
-		@media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-			margin-left: 1rem;
+		@media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+			margin-left: 2rem;
 		}
 	}
 
-	@media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-		font-size: ${({ theme }) => theme.fontSize.large};
+	@media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+		display: flex;
+		font-size: 1.1rem;
 	}
 
-	@media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-		display: none;
+	@media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
+		font-size: ${({ theme }) => theme.fontSize.xlarge};
 	}
 `

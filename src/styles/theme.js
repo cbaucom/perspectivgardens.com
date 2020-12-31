@@ -46,6 +46,7 @@ const fontFamily = {
 const breakpoints = {
 	phone: '600px',
 	tablet: '800px',
+	desktop: '1000px',
 }
 
 const theme = {

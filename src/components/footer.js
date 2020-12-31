@@ -31,6 +31,9 @@ function Footer() {
 							<Link to={'/maintenance'}>Maintenance</Link>
 						</li>
 						<li>
+							<Link to={'/projects'}>Projects</Link>
+						</li>
+						<li>
 							<Link to={'/services'}>Services</Link>
 						</li>
 						<li>

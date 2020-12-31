@@ -22,6 +22,9 @@ function Menu({ open, ...props }) {
 			<StyledLink to="/maintenance" tabIndex={tabIndex}>
 				Maintenance
 			</StyledLink>
+			<StyledLink to="/projects" tabIndex={tabIndex}>
+				Projects
+			</StyledLink>
 			<StyledLink to="/services" tabIndex={tabIndex}>
 				Services
 			</StyledLink>
