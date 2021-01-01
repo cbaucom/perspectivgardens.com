@@ -7,5 +7,6 @@
 		"statusBar.background": "#005826",
 		"statusBarItem.hoverBackground": "#1270db",
 		"statusBar.foreground": "#e7e7e7",
-	}
+	},
+	"editor.formatOnSave": true
 }

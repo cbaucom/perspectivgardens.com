@@ -1,6 +1,6 @@
-import React from "react"
-import { StaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import React from 'react'
+import { StaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image'
 
 /*
  * This component is built using `gatsby-image` to automatically serve optimized
@@ -14,38 +14,35 @@ import Img from "gatsby-image"
  */
 
 export default class Image extends React.Component {
-  render() {
-    return (
-      <StaticQuery
-        query={graphql`
-          query {
-            allImageSharp {
-              edges {
-                node {
-                  fluid(maxWidth: 1200, maxHeight: 600) {
-                    ...GatsbyImageSharpFluid
-                  }
-                }
-              }
-            }
-          }
-        `}
-        render={data => {
-          return (
-            <Img
-              fluid={
-                data.allImageSharp.edges.find(element => {
-                  // Match string after final slash
-                  return (
-                    element.node.fluid.src.split("/").pop() ===
-                    this.props.imgsrc
-                  )
-                }).node.fluid
-              }
-            />
-          )
-        }}
-      />
-    )
-  }
+	render() {
+		return (
+			<StaticQuery
+				query={graphql`
+					query {
+						allImageSharp {
+							edges {
+								node {
+									fluid(maxWidth: 1200, maxHeight: 600) {
+										...GatsbyImageSharpFluid
+									}
+								}
+							}
+						}
+					}
+				`}
+				render={(data) => {
+					return (
+						<Img
+							fluid={
+								data.allImageSharp.edges.find((element) => {
+									// Match string after final slash
+									return element.node.fluid.src.split('/').pop() === this.props.imgsrc
+								}).node.fluid
+							}
+						/>
+					)
+				}}
+			/>
+		)
+	}
 }
