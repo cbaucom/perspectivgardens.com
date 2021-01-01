@@ -13,10 +13,10 @@ const headroom = css`
 		font-size: ${theme.fontSize.large};
 		padding: 15px 1rem;
 		width: 100%;
-		svg {
+		/* svg {
 			width: 120px;
 			height: 80px;
-		}
+		} */
 		nav {
 			a {
 				color: ${theme.colors.primary.default};
