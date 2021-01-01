@@ -13,7 +13,7 @@ module.exports = {
 		{
 			resolve: `gatsby-plugin-react-helmet-canonical-urls`,
 			options: {
-				siteUrl: `https://www.perspectivgardens.com`,
+				siteUrl: `https://perspectivgardens.com`,
 			},
 		},
 		{
