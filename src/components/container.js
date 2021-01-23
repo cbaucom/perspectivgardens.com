@@ -14,6 +14,11 @@ const Container = styled.div`
 	@media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
 		margin: calc(2rem + 100px) auto 3rem;
 	}
+
+	/* > 1000px */
+	@media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+		margin: calc(4rem + 100px) auto 3rem;
+	}
 `
 
 export default Container
