@@ -17,7 +17,7 @@ function IndexPage() {
 	]
 	return (
 		<Layout>
-			<SEO title="Home | Perspectiv Gardens" meta={GOOGLE_SEARCH_CONSOLE_META} />
+			<SEO title="Home" meta={GOOGLE_SEARCH_CONSOLE_META} />
 			<Container>
 				<FrontpageHero />
 				<Content>

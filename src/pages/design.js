@@ -29,7 +29,7 @@ function DesignPage() {
 	return (
 		<Layout>
 			<SEO
-				title="Rockwall Landscape Designers | Patio & Garden Plans | Perspectiv"
+				title="Rockwall Landscape Designers | Patio & Garden Plans"
 				description="Perspectiv gardens takes a unique approach to landscape design. We can help create a stunning plan for your garden, patio, or yard."
 			/>
 			<Container>

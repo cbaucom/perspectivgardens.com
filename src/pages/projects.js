@@ -7,7 +7,7 @@ import Gallery from '../components/gallery'
 function Projects() {
 	return (
 		<Layout>
-			<SEO title="Projects | Perspectiv Gardens" />
+			<SEO title="Projects" />
 			<Gallery />
 		</Layout>
 	)

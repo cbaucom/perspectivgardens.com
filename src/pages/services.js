@@ -33,7 +33,7 @@ function Services() {
 
 	return (
 		<Layout>
-			<SEO title="Services | Perspectiv Gardens" />
+			<SEO title="Services" />
 			<Container>
 				<Title>Services</Title>
 				<ServicesContainer>
