@@ -22,7 +22,7 @@ function About() {
 
 	return (
 		<Layout>
-			<SEO title="About | Perspectiv Gardens" />
+			<SEO title="About" />
 			<Container>
 				<Title>About Us</Title>
 				<SubTitle>A Landscaper with Perspectiv</SubTitle>

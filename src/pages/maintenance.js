@@ -8,15 +8,19 @@ import SEO from '../components/seo'
 function MaintenancePage() {
 	return (
 		<Layout>
-			<SEO title="Maintenance | Perspectiv Gardens" />
+			<SEO
+				title="Rockwall Lawn Maintenance | Sod, Aeration, Raking & Pruning Service"
+				description="The dedicated team at Perspectiv Gardens can maintain your lawn beautifully with services like sod, aeration, raking, and pruning."
+			/>
 			<Container>
 				<Content>
 					<Title>Maintenance</Title>
 					<Text>
-						At Perspectiv Gardens, we have a passion for landscaping and lawn care and a reputation for
-						excellent customer service and the highest quality work. Whether we’re designing a new flagstone
-						patio or simply weeding a flower bed, we take pride in a job well done. In addition to unique
-						landscape design, we offer a variety of lawn and landscape maintenance services.
+						At Perspectiv Gardens, we have a passion for helping the people of Rockwall with lawn
+						maintenance and a reputation for excellent customer service and the highest quality work.
+						Whether we’re designing a new flagstone patio or simply weeding a flower bed, we take pride in a
+						job well done. In addition to unique landscape design, we offer a variety of landscape and lawn
+						maintenance services to Rockwall, TX, and nearby cities.
 					</Text>
 					<SubTitle>Sod Installation</SubTitle>
 					<Text>
@@ -24,7 +28,7 @@ function MaintenancePage() {
 						installation can give your yard a fresh start. A beautiful and vibrant lawn accents your home
 						and your landscaping, and provides an enjoyable place for your family to spend quality time
 						together. Whether you need to replace old sod or are wanting to add a new area of sod in your
-						landscaping, the sod installation experts at Perspectiv Gardens have you covered.
+						landscaping, the Rockwall sod installation experts at Perspectiv Gardens have you covered.
 					</Text>
 					<SubTitle>Aerations</SubTitle>
 					<Text>
@@ -39,14 +43,15 @@ function MaintenancePage() {
 					<Text>
 						To keep your lawn and landscaping looking pristine all year round, seasonal cleanup is a must.
 						Removing leaves, weeds, and other debris from your yard will help it thrive and look its best.
-						Whether you need raking and bagging services in the fall or weeding and fertilizing in the
-						spring, our team of experts can keep your lawn looking clean and beautiful.{' '}
+						Whether you need our Dallas and Rockwall raking and bagging services in the fall or weeding and
+						fertilizing in the spring, our team of experts can keep your lawn looking clean and beautiful.{' '}
 					</Text>
 					<SubTitle>Flower Bed Maintenance</SubTitle>
 					<Text>
 						The splash of color flowers add to your landscaping brightens up any area of your yard.
-						Perspectiv Gardens can maintain the plants and flowers in your flower beds, ensuring they remain
-						healthy and beautiful all year long.
+						Perspectiv Gardens offers people in Rockwall lawn maintenance and garden care service that will
+						keep their plants and flowers in great condition, ensuring they remain healthy and beautiful all
+						year long.
 					</Text>
 					<SubTitle>Flower Bed Cleanups</SubTitle>
 					<Text>
@@ -54,7 +59,7 @@ function MaintenancePage() {
 						will keep your flower beds beautiful, healthy, and free of weeds and debris. For a new
 						perspective in landscaping and lawn maintenance services, call the team of professionals at
 						Perspectiv Gardens for an estimate! We look forward to providing you with superior customer
-						service and high quality lawn maintenance services.
+						service and high quality lawn maintenance services to Rockwall and other Texas Communities.
 					</Text>
 				</Content>
 			</Container>

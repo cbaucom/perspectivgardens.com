@@ -28,28 +28,31 @@ function DesignPage() {
 
 	return (
 		<Layout>
-			<SEO title="Design | Perspectiv Gardens" />
+			<SEO
+				title="Rockwall Landscape Designers | Patio & Garden Plans"
+				description="Perspectiv gardens takes a unique approach to landscape design. We can help create a stunning plan for your garden, patio, or yard."
+			/>
 			<Container>
 				<Content>
 					<Title>Design</Title>
 					<Text>
 						We’ve been told time and time again that our approach to landscaping design is creative, unique,
-						and brings a whole new perspective to landscaping. The truth is, we have a passion for what we
-						do, and we love designing and creating beautiful, natural works of art that make our customers’
-						outdoor areas more appealing and enjoyable.
+						and brings a whole new perspective to landscaping. The truth is, our Rockwall landscape
+						designers have a passion for what we do, and we love designing and creating beautiful, natural
+						works of art that make our customers’ outdoor areas more appealing and enjoyable.
 					</Text>
 					<Text>
 						At Perspectiv Gardens, our design team is truly special. We take a unique approach in our 2D and
-						3D designs, so the landscapes we design are one of a kind. Best of all, our design team will
-						have it ready for you in 24 hours!
+						3D designs, so the landscapes we design are one of a kind. Best of all, our experienced Rockwall
+						landscape design team will have it ready for you in 24 hours!
 					</Text>
 					<Text>
 						Our designers use high-tech landscape design software that provides our customers with a virtual
 						preview of what their landscaping will look like after our work is completed. If you’ve been
 						dreaming of transforming your dull and dreary backyard into an inviting outdoor oasis, come see
-						what the designers at Perspectiv Gardens have to offer. Our award-winning team has a reputation
-						for outstanding, high quality work, incredible attention to detail, efficient job completion,
-						and friendly and professional customer service.
+						what the designers at Perspectiv Gardens have to offer. Our award-winning Rockwall landscape
+						designers have a reputation for outstanding, high quality work, incredible attention to detail,
+						efficient job completion, and friendly and professional customer service.
 					</Text>
 					<Text>
 						If you would like our team to provide a landscape design concept to beautify your outdoor space

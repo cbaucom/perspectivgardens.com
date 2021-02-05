@@ -10,7 +10,7 @@ import Container from '../components/container'
 function Contact() {
 	return (
 		<Layout>
-			<SEO title="Contact | Perspectiv Gardens" />
+			<SEO title="Contact" />
 			<Container>
 				<Title>Contact</Title>
 

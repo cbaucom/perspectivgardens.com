@@ -8,7 +8,7 @@ export default (props) => {
 	if (typeof window !== 'undefined') {
 		return (
 			<Layout>
-				<SEO title="Thanks | Perspectiv Gardens" />
+				<SEO title="Thanks" />
 				<Container>
 					<div className="text-wrapper">
 						<h1>Thanks, {props.location.state.name}! </h1>
@@ -21,7 +21,7 @@ export default (props) => {
 	} else {
 		return (
 			<Layout>
-				<SEO title="Thanks | Perspectiv Gardens" />
+				<SEO title="Thanks" />
 				<Container>
 					<div className="text-wrapper">
 						<h1>Thanks! </h1>

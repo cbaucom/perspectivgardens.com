@@ -9,9 +9,15 @@ import Reviews from '../components/reviews'
 import SEO from '../components/seo'
 
 function IndexPage() {
+	const GOOGLE_SEARCH_CONSOLE_META = [
+		{
+			name: `google-site-verification`,
+			content: `${process.env.GATSBY_GOOGLE_SEARCH_CONSOLE_KEY}`,
+		},
+	]
 	return (
 		<Layout>
-			<SEO title="Home | Perspectiv Gardens" />
+			<SEO title="Home" meta={GOOGLE_SEARCH_CONSOLE_META} />
 			<Container>
 				<FrontpageHero />
 				<Content>
