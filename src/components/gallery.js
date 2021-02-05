@@ -1,42 +1,31 @@
 import React from 'react'
 import styled from 'styled-components'
 import { useStaticQuery, graphql } from 'gatsby'
-import Img from 'gatsby-image'
 
 function Gallery() {
 	const data = useStaticQuery(graphql`
 		{
-			allDriveNode {
+			allCloudinaryMedia {
 				edges {
 					node {
-						id
-						name
-						localFile {
-							childImageSharp {
-								fluid(maxWidth: 1000, quality: 100) {
-									...GatsbyImageSharpFluid
-								}
-							}
-						}
+						public_id
+						secure_url
 					}
 				}
 			}
 		}
 	`)
 
+	const clImages = data.allCloudinaryMedia.edges
+
 	return (
 		<Wrapper>
 			<Title>Gallery</Title>
 			<GalleryContainer>
 				<Grid>
-					{data.allDriveNode.edges.map(({ node }) => (
-						<Item key={node.id}>
-							<Img
-								fluid={node.localFile.childImageSharp.fluid}
-								alt={node.name}
-								loading="eager"
-								placeholderStyle={{ visibility: 'hidden' }}
-							/>
+					{clImages.map((image, index) => (
+						<Item key={`${index}-cl`}>
+							<img src={image.node.secure_url} alt={image.node.public_id} />
 						</Item>
 					))}
 				</Grid>

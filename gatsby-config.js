@@ -13,7 +13,7 @@ module.exports = {
 		{
 			resolve: `gatsby-plugin-react-helmet-canonical-urls`,
 			options: {
-				siteUrl: `https://www.perspectivgardens.com`,
+				siteUrl: `https://perspectivgardens.com`,
 			},
 		},
 		{
@@ -40,11 +40,14 @@ module.exports = {
 			},
 		},
 		{
-			resolve: `gatsby-source-drive`,
+			resolve: `gatsby-source-cloudinary`,
 			options: {
-				folderId: process.env.GOOGLE_DRIVE_FOLDER_ID,
-				key: process.env.GOOGLE_KEY,
-				serviceAccountEmail: process.env.GOOGLE_SA_EMAIL,
+				cloudName: process.env.CLOUDINARY_CLOUD_NAME,
+				apiKey: process.env.CLOUDINARY_API_KEY,
+				apiSecret: process.env.CLOUDINARY_API_SECRET,
+				resourceType: `image`,
+				prefix: `perspectivgardens.com/`,
+				maxResults: 100,
 			},
 		},
 		{
