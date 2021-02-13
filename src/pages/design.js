@@ -6,6 +6,7 @@ import Img from 'gatsby-image'
 import Container from '../components/container'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
+import YouTube from 'react-youtube'
 
 function DesignPage() {
 	const data = useStaticQuery(graphql`
@@ -26,6 +27,14 @@ function DesignPage() {
 		}
 	`)
 
+	const opts = {
+		width: '100%',
+		playerVars: {
+			// https://developers.google.com/youtube/player_parameters
+			// autoplay: 1,
+		},
+	}
+
 	return (
 		<Layout>
 			<SEO
@@ -35,6 +44,7 @@ function DesignPage() {
 			<Container>
 				<Content>
 					<Title>Design</Title>
+					<YouTube videoId="DXDk0K-r9pw" opts={opts} />
 					<Text>
 						We’ve been told time and time again that our approach to landscaping design is creative, unique,
 						and brings a whole new perspective to landscaping. The truth is, our Rockwall landscape
@@ -85,7 +95,11 @@ export default DesignPage
 const Content = styled.section`
 	margin: 0 auto;
 	max-width: ${({ theme }) => theme.maxWidth};
-	padding: 0.5rem 1rem;
+	padding: 0;
+
+	@media (min-width: ${({ theme }) => theme.breakpoints.phone}) {
+		padding: 0.5rem 1rem;
+	}
 `
 const Title = styled.h1`
 	color: ${({ theme }) => theme.colors.primary.default};
