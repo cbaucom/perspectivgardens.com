@@ -17,7 +17,7 @@ function CardBody({ name, description }) {
 				<h2>{name}</h2>
 				<p className="body-content">{description}</p>
 			</div>
-			<StyledLink to="contact">Request a quote</StyledLink>
+			<StyledLink to="/contact">Request a quote</StyledLink>
 		</StyledBody>
 	)
 }
