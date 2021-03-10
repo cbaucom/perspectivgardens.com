@@ -62,7 +62,7 @@ class ContactForm extends React.Component {
 				method="post"
 				action="/thank-you"
 				data-netlify="true"
-				data-netlify-honeypot="bot-field"
+				netlify-honeypot="bot-field"
 				onSubmit={this.handleSubmit}
 			>
 				{this.state.error && <p className="form-error">{this.state.error}</p>}
