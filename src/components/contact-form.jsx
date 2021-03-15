@@ -17,7 +17,7 @@ class ContactForm extends React.Component {
 			phone: '',
 			location: '',
 			recipient: '1',
-			service: 'Mowing and Edging',
+			service: 'Landscaping',
 			message: '',
 			error: '',
 		}
