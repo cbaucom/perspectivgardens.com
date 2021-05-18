@@ -17,7 +17,11 @@ function IndexPage() {
 	]
 	return (
 		<Layout>
-			<SEO title="Home" meta={GOOGLE_SEARCH_CONSOLE_META} />
+			<SEO
+				title="Rockwall Landscaping Company & Lawn Care"
+				meta={GOOGLE_SEARCH_CONSOLE_META}
+				description="Perspectiv Gardens is a Rockwall based landscaping company that can make your yard beautiful and keep it that way all year long."
+			/>
 			<Container>
 				<FrontpageHero />
 				<Content>

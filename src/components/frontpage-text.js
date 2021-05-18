@@ -32,15 +32,15 @@ function FrontpageText() {
 				Is your yard needing some much-needed attention? Would you like to have a beautiful, well-kept outdoor
 				area to enjoy every day of the year? Your yard can become an oasis of natural beauty with the help of
 				Perspectiv Gardens Lawncare and Landscaping. We’re an award-winning landscaping company based in
-				Rockwall, Texas, with more than 20 years of landscaping experience. Whether you’re needing a fresh, new
-				look in landscape design, thinking about adding an appealing flagstone pathway or flower bed, or simply
-				wanting weekly maintenance to keep your lawn looking immaculate, our team of landscaping and design
-				professionals can help with friendly and professional service.{' '}
+				Rockwall, Texas, with more than 20 years of landscaping and lawn care experience. Whether you’re needing
+				a fresh, new look in landscape design, thinking about adding an appealing flagstone pathway or flower
+				bed, or simply wanting weekly maintenance to keep your lawn looking immaculate, our team of landscaping
+				and design professionals can help with friendly and professional service.{' '}
 			</Text>
 
 			<Text>
 				Over the past 20 years, we have earned a reputation for providing excellent customer service, quick
-				response time, and high quality materials and plants. We have a passion for the work we do, and it shows
+				response time, and high-quality materials and plants. We have a passion for the work we do, and it shows
 				in each job we complete. We offer estimates and designs for any landscaping or outdoor beautification
 				project you can imagine.
 			</Text>
@@ -58,9 +58,10 @@ function FrontpageText() {
 			</ul>
 			<Text>
 				Our unique, creative landscape designs set us apart from other landscaping companies. Why wait another
-				day? We can transform your yard into a beautiful and inviting outdoor sanctuary. When you’re ready for a
-				new perspective in landscaping, call the experts at Perspectiv Gardens for an estimate! We look forward
-				to providing you with outstanding service and the highest quality in landscape design and lawn care.
+				day? Our Rockwall landscaping company can transform yard into a beautiful and inviting outdoor
+				sanctuary. When you’re ready for a new perspective in landscaping, call the experts at Perspectiv
+				Gardens in for an estimate! We look forward to providing you with outstanding service and the highest
+				quality in landscape design and lawn care.
 			</Text>
 		</Wrapper>
 	)
