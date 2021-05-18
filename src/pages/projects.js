@@ -7,7 +7,10 @@ import Gallery from '../components/gallery'
 function Projects() {
 	return (
 		<Layout>
-			<SEO title="Projects" />
+			<SEO
+				title="Rockwall Landscaping Design: Residential Landscapers"
+				description="Looking for the best custom landscaping design company in Texas? Turn to the professionals at Perspectiv Gardens in Rockwall!"
+			/>
 			<Gallery />
 		</Layout>
 	)
