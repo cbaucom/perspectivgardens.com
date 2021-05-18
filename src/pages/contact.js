@@ -10,7 +10,10 @@ import Container from '../components/container'
 function Contact() {
 	return (
 		<Layout>
-			<SEO title="Contact" />
+			<SEO
+				title="Rockwall Yard Maintenance: Lawn & Garden Care"
+				description="Our yard maintenance experts here is Rockwall can help you with all your lawn and garden needs. Contact us today and get a quote."
+			/>
 			<Container>
 				<Title>Contact</Title>
 
