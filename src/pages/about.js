@@ -22,7 +22,10 @@ function About() {
 
 	return (
 		<Layout>
-			<SEO title="About" />
+			<SEO
+				title="Rockwall Lawn Care: Yard & Landscape Design"
+				description="With almost 20 years of experience helping people with landscape design, lawn care, we can help make your yard come to life."
+			/>
 			<Container>
 				<Title>About Us</Title>
 				<SubTitle>A Landscaper with Perspectiv</SubTitle>
@@ -36,13 +39,14 @@ function About() {
 						/>
 					</ImageWrapper>
 					<Text>
-						Perspectiv Gardens is an Award-Winning landscaping company based in Rockwall, Texas. With almost
-						20 years of experience, you can count on us to perform the kind of the work that will leave your
-						neighbors in awe. The name, "Perspectiv", came from the numerous customers over the years who
-						mentioned the word whenever our work was completed, things like: "I love the perspective you
-						drew up for my wife and I. I never would have thought of going that route in landscaping, but
-						I'm glad we did!" or "I would walk out my back door sometimes and just be lost. I didn't know
-						what to do and what not to do. I needed a landscaper with a different perspective."
+						Perspectiv Gardens is an Award-Winning landscaping company based in Rockwall, Texas. Lawn care,
+						yard, and landscape design are our specialty, and with almost 20 years of experience, you can
+						count on us to perform the kind of the work that will leave your neighbors in awe. The name,
+						"Perspectiv", came from the numerous customers over the years who mentioned the word whenever
+						our work was completed, things like: "I love the perspective you drew up for my wife and I. I
+						never would have thought of going that route in landscaping, but I'm glad we did!" or "I would
+						walk out my back door sometimes and just be lost. I didn't know what to do and what not to do. I
+						needed a landscaper with a different perspective."
 					</Text>
 				</MainWrapper>
 			</Container>
