@@ -33,7 +33,10 @@ function Services() {
 
 	return (
 		<Layout>
-			<SEO title="Services" />
+			<SEO
+				title="Rockwall Landscapers: Flagstone, Gardening"
+				description="Whatever your yard needs, our landscapers can get the job done. We do it all from flagstone to gardening, raking, and much more!"
+			/>
 			<Container>
 				<Title>Services</Title>
 				<ServicesContainer>
