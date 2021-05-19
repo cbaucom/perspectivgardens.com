@@ -48,7 +48,7 @@ const StyledBody = styled.div`
 		font-size: 1.2rem;
 		line-height: 1.65;
 
-		@media (min-width: ${({ theme }) => theme.breakpoints.phone}) {
+		@media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
 			font-size: 1.25rem;
 			line-height: 1.8;
 		}
