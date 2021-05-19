@@ -9,7 +9,7 @@ function MaintenancePage() {
 	return (
 		<Layout>
 			<SEO
-				title="Rockwall Lawn Maintenance | Sod, Aeration, Raking & Pruning Service"
+				title="Rockwall Lawn Maintenance | Sod, Aeration, Raking"
 				description="The dedicated team at Perspectiv Gardens can maintain your lawn beautifully with services like sod, aeration, raking, and pruning."
 			/>
 			<Container>
