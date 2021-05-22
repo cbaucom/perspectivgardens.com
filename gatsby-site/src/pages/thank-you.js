@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 
-export const Thanks = (props) => {
+function Thanks(props) {
 	if (typeof window !== 'undefined') {
 		return (
 			<Layout>
@@ -33,6 +33,8 @@ export const Thanks = (props) => {
 		)
 	}
 }
+
+export default Thanks
 
 // Component Styles
 const Container = styled.div`
