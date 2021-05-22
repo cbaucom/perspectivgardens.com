@@ -9,8 +9,25 @@
     "gatsby-site",
     "gatsby-plugin-tawk.to"
   ],
+  "lint-staged": {
+    "./gatsby-site/src/**/*.{js,jsx}": [
+      "eslint --fix"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "scripts": {
     "build": "cd gatsby-site && gatsby build",
-    "develop": "cd gatsby-site && gatsby develop"
+    "develop": "cd gatsby-site && gatsby develop",
+    "format": "cd gatsby-site && prettier --write \"**/*.{js,jsx,json,md}\"",
+    "lint": "cd gatsby-site && eslint --ext .js,.jsx ./src/**/*.{js,jsx}",
+    "lint:fix": "cd gatsby-site && yarn lint --fix"
+  },
+  "devDependencies": {
+    "husky": "4.3.8",
+    "lint-staged": "^11.0.0"
   }
 }
