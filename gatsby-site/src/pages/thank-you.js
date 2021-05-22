@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 
-export default (props) => {
+export const Thanks = (props) => {
 	if (typeof window !== 'undefined') {
 		return (
 			<Layout>
