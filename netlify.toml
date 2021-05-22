@@ -1,0 +1,3 @@
+# Configuration for a local plugin
+[[plugins]]
+package = "/src/plugins/gatsby-plugin-tawk.to"
