@@ -74,6 +74,13 @@ module.exports = {
 				icon: `src/images/PG_SquareLogo_512x512.png`, // This path is relative to the root of the site.
 			},
 		},
+		{
+			resolve: `gatsby-plugin-tawk.to`,
+			options: {
+				tawkId: process.env.GATSBY_TAWK_ID,
+				tawkKey: process.env.GATSBY_TAWK_KEY,
+			},
+		},
 		// this (optional) plugin enables Progressive Web App + Offline functionality
 		// To learn more, visit: https://gatsby.dev/offline
 		// `gatsby-plugin-offline`,
