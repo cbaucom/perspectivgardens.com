@@ -51,6 +51,12 @@ module.exports = {
 			},
 		},
 		{
+			resolve: `gatsby-source-instagram`,
+			options: {
+				username: `48017349620`,
+			},
+		},
+		{
 			resolve: `gatsby-plugin-google-analytics`,
 			options: {
 				trackingId: process.env.GA_ID,

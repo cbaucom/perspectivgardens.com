@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import FrontpageHero from '../components/frontpage-hero'
 import FrontpageServices from '../components/frontpage-services'
 import FrontpageText from '../components/frontpage-text'
+import Instagram from '../components/instagram'
 import Layout from '../components/layout'
 import Reviews from '../components/reviews'
 import SEO from '../components/seo'
@@ -28,6 +29,7 @@ function IndexPage() {
 					<FrontpageText />
 					<FrontpageServices />
 					<Reviews />
+					<Instagram />
 				</Content>
 			</Container>
 		</Layout>
