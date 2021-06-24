@@ -40,6 +40,12 @@ module.exports = {
 			},
 		},
 		{
+			resolve: `gatsby-source-instagram`,
+			options: {
+				username: `48017349620`,
+			},
+		},
+		{
 			resolve: `gatsby-source-cloudinary`,
 			options: {
 				cloudName: process.env.CLOUDINARY_CLOUD_NAME,
