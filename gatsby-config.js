@@ -39,6 +39,14 @@ module.exports = {
 				plugins: [],
 			},
 		},
+		// {
+		// 	resolve: `gatsby-source-instagram`,
+		// 	options: {
+		// 		username: `48017349620`,
+		// 		access_token: `IGQVJYeFl4QkxBTU8ycVotZAUlYVW5hUUQzb3FSR2YxYmN5Q0NJYWlWTklfRUxyVUJFelRtVnZAlWW1ucnRQU2hWY05uSGJfRHRKcS1FY0FJWVc0ZAGUwZAW15dDhDd3RheGtHQTB4Nl9LVDlfcnVQc3ZAOagZDZD`,
+		// 		instagram_id: `2009656745922275`,
+		// 	},
+		// },
 		{
 			resolve: `gatsby-source-cloudinary`,
 			options: {
