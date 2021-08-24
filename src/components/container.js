@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const Container = styled.div`
-	margin: calc(1rem + 100px) auto 3rem;
+	margin: calc(1rem + 80px) auto 3rem;
 	padding: 1rem;
 	display: flex;
 	flex-direction: column;
@@ -12,11 +12,11 @@ const Container = styled.div`
 
 	/* > 800px */
 	@media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
-		margin: calc(2rem + 100px) auto 3rem;
+		margin: calc(2rem + 80px) auto 3rem;
 	}
 
 	/* > 1000px */
-	@media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+	@media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
 		margin: calc(4rem + 100px) auto 3rem;
 	}
 `

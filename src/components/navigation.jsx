@@ -34,6 +34,7 @@ function Navigation() {
 					<StyledLink to="/maintenance">Maintenance</StyledLink>
 					<StyledLink to="/projects">Projects</StyledLink>
 					<StyledLink to="/services">Services</StyledLink>
+					<StyledLink to="/service-areas">Service Areas</StyledLink>
 					<StyledLink to="/contact">Contact</StyledLink>
 				</Nav>
 			</Wrapper>
@@ -59,7 +60,7 @@ const Wrapper = styled.div`
 	flex-direction: row;
 	width: 100%;
 
-	@media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+	@media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
 		justify-content: space-between;
 	}
 `
@@ -105,6 +106,10 @@ const PhoneLink = styled.div`
 	}
 
 	@media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+		top: 35px;
+	}
+
+	@media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
 		display: none;
 	}
 `
@@ -112,14 +117,16 @@ const PhoneLink = styled.div`
 const Nav = styled.nav`
 	display: none;
 	justify-content: flex-end;
-	font-size: ${({ theme }) => theme.fontSize.large};
 	font-family: ${({ theme }) => theme.fontFamily.heading};
 	align-items: center;
 	a {
 		color: ${({ theme }) => theme.colors.white.default};
+		font-size: 1.4rem;
 		margin-left: 1rem;
 		width: auto;
 		transition: all ${({ theme }) => theme.transitions.normal};
+		white-space: nowrap;
+
 		&:hover {
 			color: ${({ theme }) => theme.colors.white.dark};
 		}
@@ -127,17 +134,17 @@ const Nav = styled.nav`
 			color: ${({ theme }) => theme.colors.white.default};
 		}
 
-		@media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
-			margin-left: 2rem;
+		@media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
+			margin-left: 1.2rem;
 		}
 	}
 
-	@media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+	@media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
 		display: flex;
-		font-size: 1.1rem;
+		/* font-size: 1.1rem;
 	}
 
-	@media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
+	@media (min-width: ${({ theme }) => theme.breakpoints.desktop}) { */
 		font-size: ${({ theme }) => theme.fontSize.xlarge};
 	}
 `

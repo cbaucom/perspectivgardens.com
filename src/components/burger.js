@@ -67,6 +67,10 @@ const StyledBurger = styled.button`
 	}
 
 	@media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+		top: 35px;
+	}
+
+	@media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
 		display: none;
 	}
 `
