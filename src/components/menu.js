@@ -10,14 +10,18 @@ Menu.propTypes = {
 function Menu({ open, ...props }) {
 	const isHidden = open ? true : false
 	const tabIndex = isHidden ? 0 : -1
-	const body = document.querySelector('body')
 
-	if (open) {
-		body.style.overflow = 'hidden'
-		body.style.position = 'fixed'
-	} else {
-		body.style.overflow = 'auto'
-		body.style.position = 'inherit'
+	// Prevent the page from scrolling when the modal is open
+	if (typeof window !== 'undefined') {
+		const body = document.querySelector('body')
+
+		if (open) {
+			body.style.overflow = 'hidden'
+			body.style.position = 'fixed'
+		} else {
+			body.style.overflow = 'auto'
+			body.style.position = 'inherit'
+		}
 	}
 
 	return (
