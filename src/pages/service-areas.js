@@ -13,7 +13,8 @@ const SERVICE_AREAS = [
 		url: '/frisco',
 		description:
 			'Homeowners in Frisco Texas trust Perspectiv gardens with all of their landscaping and lawn care needs. Contact our experts today!',
-		image: 'https://res.cloudinary.com/crbaucom/image/upload/v1609691684/perspectivgardens.com/A2.jpg',
+		image:
+			'https://res.cloudinary.com/crbaucom/image/upload/v1630952555/perspectiv_non_gallery_images/800px-Frisco_Downtown_Water_tower_05312010.jpg',
 	},
 	{
 		id: 2,
@@ -21,14 +22,18 @@ const SERVICE_AREAS = [
 		url: '/mckinney',
 		description:
 			'McKinney is a busy city with many major shopping and service areas. McKinney is a great place to live if you want to live in a city that is packed with shopping and service areas. McKinney is also a great place to live if you want to live in a city that is packed with shopping and service areas.',
-		image: 'https://res.cloudinary.com/crbaucom/image/upload/v1609691687/perspectivgardens.com/D2.jpg',
+		image:
+			'https://res.cloudinary.com/crbaucom/image/upload/v1630952616/perspectiv_non_gallery_images/Mckinneywater.jpg',
 	},
 ]
 
 function ServiceAreas() {
 	return (
 		<Layout>
-			<SEO title="" description="" />
+			<SEO
+				title="Rockwall Landscape Company: Professional Landscaper"
+				description="Perspectiv Gardens is a Rockwall landscape company with a passion for landscape design, and a reputation for high quality work."
+			/>
 			<Container>
 				<Title>Service Areas</Title>
 				<ServicesContainer>
