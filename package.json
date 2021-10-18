@@ -36,8 +36,8 @@
   },
   "devDependencies": {
     "@bizdotcom/eslint-config-bdc": "^0.0.1",
-    "@typescript-eslint/eslint-plugin": "4.10.0",
-    "@typescript-eslint/parser": "4.10.0",
+    "@typescript-eslint/eslint-plugin": "4.33.0",
+    "@typescript-eslint/parser": "4.33.0",
     "babel-eslint": "10.x",
     "eslint": "7.16.0",
     "eslint-config-react-app": "^6.0.0",
