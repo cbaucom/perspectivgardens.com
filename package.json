@@ -27,7 +27,7 @@
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-focus-lock": "^2.2.1",
+    "react-focus-lock": "2.9.1",
     "react-headroom": "^3.0.0",
     "react-helmet": "^6.1.0",
     "react-icons": "^4.1.0",
