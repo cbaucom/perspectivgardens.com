@@ -30,7 +30,7 @@
     "react-focus-lock": "^2.2.1",
     "react-headroom": "^3.0.0",
     "react-helmet": "^6.1.0",
-    "react-icons": "^4.1.0",
+    "react-icons": "4.4.0",
     "react-youtube": "^7.13.1",
     "styled-components": "^5.0.1"
   },
