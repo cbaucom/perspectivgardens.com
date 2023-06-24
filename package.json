@@ -20,7 +20,7 @@
     "gatsby-source-filesystem": "^2.8.1",
     "gatsby-source-instagram": "^0.9.0",
     "gatsby-transformer-cloudinary": "^2.1.0",
-    "gatsby-transformer-remark": "^2.6.59",
+    "gatsby-transformer-remark": "^5.0.0",
     "gatsby-transformer-sharp": "^2.9.0",
     "moment": "^2.29.1",
     "polished": "^4.0.5",
